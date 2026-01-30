@@ -1,0 +1,963 @@
+/* ==============================================
+   File: pages/services.css
+   Project: Zaza Rush Subaru
+   Developer: bguvava
+   Last Updated: January 30, 2026
+   Description: Services page styles (SVC-001 to SVC-032)
+   ============================================== */
+
+/* ---------------------------------------------
+   PAGE HEADER
+   --------------------------------------------- */
+.page-header {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #001a52 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: white;
+}
+
+.breadcrumb-item.active {
+  color: white;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------------------
+   TAB NAVIGATION - SVC-001
+   --------------------------------------------- */
+.service-tabs-nav {
+  border-bottom: none;
+  gap: var(--spacing-xs);
+  background: var(--color-light-gray);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-lg);
+}
+
+.service-tabs-nav .nav-link {
+  color: var(--color-dark-gray);
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+.service-tabs-nav .nav-link:hover {
+  background: rgba(0, 51, 160, 0.1);
+  color: var(--color-primary);
+}
+
+.service-tabs-nav .nav-link.active {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.service-tabs-nav .nav-link i {
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------------------
+   MOBILE ACCORDION - SVC-028
+   --------------------------------------------- */
+.service-accordion {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.service-accordion .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.service-accordion .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.service-accordion .accordion-button {
+  background: white;
+  color: var(--color-dark-gray);
+  font-weight: var(--font-weight-semibold);
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: none;
+}
+
+.service-accordion .accordion-button:not(.collapsed) {
+  background: var(--color-primary);
+  color: white;
+}
+
+.service-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.service-accordion .accordion-button::after {
+  filter: brightness(0.5);
+}
+
+.service-accordion .accordion-button:not(.collapsed)::after {
+  filter: brightness(10);
+}
+
+.service-accordion .accordion-body {
+  padding: var(--spacing-lg);
+  background: var(--color-light-gray);
+}
+
+/* ---------------------------------------------
+   SERVICE HERO BANNERS - SVC-004, etc.
+   --------------------------------------------- */
+.service-hero {
+  position: relative;
+  min-height: 250px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #001a52 100%);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-2xl);
+  overflow: hidden;
+}
+
+.service-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.service-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.service-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.service-hero-title {
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.service-hero-subtitle {
+  max-width: 500px;
+}
+
+/* Tab-specific hero backgrounds */
+.parts-hero {
+  background: linear-gradient(135deg, #1a4d8f 0%, #0d2e5c 100%);
+}
+
+.breaking-hero {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+}
+
+.trading-hero {
+  background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+}
+
+.garage-hero {
+  background: linear-gradient(135deg, #1e3a5f 0%, #0d1f33 100%);
+}
+
+.diagnostics-hero {
+  background: linear-gradient(135deg, #234e70 0%, #0f2940 100%);
+}
+
+/* ---------------------------------------------
+   SERVICE CARDS
+   --------------------------------------------- */
+.service-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--color-light-gray);
+  background: var(--color-light-blue);
+}
+
+.service-card-header i {
+  font-size: 1.5rem;
+}
+
+.service-card-header h3 {
+  margin: 0;
+}
+
+.service-card-body {
+  padding: var(--spacing-lg);
+}
+
+/* ---------------------------------------------
+   ENGINE TYPES - SVC-005
+   --------------------------------------------- */
+.engine-type-badge {
+  background: var(--color-light-gray);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.engine-type-badge strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+}
+
+.engine-type-badge small {
+  color: var(--color-medium-gray);
+  font-size: var(--font-size-xs);
+}
+
+.engine-type-badge.highlight {
+  background: var(--color-light-blue);
+  border: 1px solid var(--color-primary);
+}
+
+.engine-type-badge:hover {
+  background: var(--color-primary);
+}
+
+.engine-type-badge:hover strong,
+.engine-type-badge:hover small {
+  color: white;
+}
+
+/* ---------------------------------------------
+   SERVICE FEATURES LIST
+   --------------------------------------------- */
+.service-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.service-features-list li:last-child {
+  border-bottom: none;
+}
+
+.service-features-list li i {
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.service-features-list li div {
+  flex: 1;
+}
+
+.service-features-list li strong {
+  display: block;
+  color: var(--color-dark-gray);
+}
+
+.service-features-list li span {
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+}
+
+/* ---------------------------------------------
+   WARRANTY INFO - SVC-007
+   --------------------------------------------- */
+.warranty-badge {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.warranty-badge.new {
+  background: var(--color-success);
+  color: white;
+}
+
+.warranty-badge.used {
+  background: var(--color-secondary);
+  color: white;
+}
+
+/* ---------------------------------------------
+   PRICING TABLE - SVC-008
+   --------------------------------------------- */
+.pricing-table {
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.pricing-row:last-child {
+  border-bottom: none;
+}
+
+.pricing-row:nth-child(even) {
+  background: var(--color-light-gray);
+}
+
+.pricing-row.highlight {
+  background: var(--color-light-blue);
+}
+
+.pricing-item {
+  font-weight: var(--font-weight-medium);
+}
+
+.pricing-value {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+/* ---------------------------------------------
+   PARTS CATEGORIES - SVC-011
+   --------------------------------------------- */
+.parts-category-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  height: 100%;
+  border: 1px solid var(--color-light-gray);
+}
+
+.parts-category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.parts-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-blue);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  transition: all var(--transition-normal);
+}
+
+.parts-category-card:hover .parts-icon {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* ---------------------------------------------
+   QUALITY TIERS - SVC-012
+   --------------------------------------------- */
+.quality-tier-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  border: 2px solid var(--color-light-gray);
+  height: 100%;
+  transition: all var(--transition-normal);
+  position: relative;
+}
+
+.quality-tier-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tier-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--color-primary);
+  color: white;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+}
+
+.tier-genuine .tier-badge {
+  background: #FFD700;
+  color: #333;
+}
+
+.tier-oem .tier-badge {
+  background: var(--color-success);
+}
+
+.tier-aftermarket .tier-badge {
+  background: var(--color-secondary);
+}
+
+.tier-features {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0;
+}
+
+.tier-features li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+}
+
+.tier-features li i {
+  color: var(--color-success);
+}
+
+.tier-price {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  text-align: center;
+  margin-top: auto;
+}
+
+/* ---------------------------------------------
+   BREAKING VEHICLES - SVC-015
+   --------------------------------------------- */
+.breaking-vehicles-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.breaking-vehicle-item {
+  background: var(--color-light-gray);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-fast);
+}
+
+.breaking-vehicle-item:hover {
+  background: var(--color-light-blue);
+}
+
+.vehicle-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-xs);
+}
+
+.vehicle-badge.available {
+  background: var(--color-success);
+  color: white;
+}
+
+.vehicle-badge.limited {
+  background: #FFC107;
+  color: #333;
+}
+
+.vehicle-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.part-tag {
+  background: white;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-dark-gray);
+  border: 1px solid var(--color-light-gray);
+}
+
+/* ---------------------------------------------
+   CORE ITEMS - SVC-016
+   --------------------------------------------- */
+.core-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.core-items-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.core-items-list li:last-child {
+  border-bottom: none;
+}
+
+.core-items-list li i {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-blue);
+  border-radius: 50%;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+/* ---------------------------------------------
+   MODEL TAGS - SVC-019
+   --------------------------------------------- */
+.model-tag {
+  background: var(--color-light-gray);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  font-weight: var(--font-weight-semibold);
+  transition: all var(--transition-fast);
+}
+
+.model-tag:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+.model-tag.highlight {
+  background: var(--color-light-blue);
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* ---------------------------------------------
+   GARAGE SERVICES - SVC-022
+   --------------------------------------------- */
+.garage-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.garage-service-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+}
+
+.garage-service-list li i {
+  width: 20px;
+  color: var(--color-primary);
+}
+
+/* Benefits List */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px dashed var(--color-light-gray);
+}
+
+.benefits-list li:last-child {
+  border-bottom: none;
+}
+
+.benefit-icon-sm {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-blue);
+  border-radius: 50%;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.benefits-list li div strong {
+  display: block;
+  font-size: var(--font-size-sm);
+}
+
+.benefits-list li div span {
+  font-size: var(--font-size-xs);
+  color: var(--color-medium-gray);
+}
+
+/* ---------------------------------------------
+   DIAGNOSTICS PRICING - SVC-025
+   --------------------------------------------- */
+.diagnostic-price-box {
+  background: var(--color-light-blue);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  text-align: center;
+  border: 1px dashed var(--color-primary);
+}
+
+.diagnostic-price-box .price-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+}
+
+.diagnostic-price-box .price-value {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.diagnostic-price-box .price-note {
+  display: block;
+  font-size: var(--font-size-xs);
+  color: var(--color-medium-gray);
+}
+
+/* ---------------------------------------------
+   HEALTH CHECK - SVC-027
+   --------------------------------------------- */
+.health-check-card {
+  border: 2px solid var(--color-primary);
+  background: linear-gradient(135deg, white 0%, var(--color-light-blue) 100%);
+}
+
+.health-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.health-check-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) 0;
+  font-size: var(--font-size-sm);
+}
+
+.health-check-list li i {
+  color: var(--color-success);
+}
+
+.health-check-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.health-check-price .price-from {
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+}
+
+.health-check-price .price-amount {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.health-check-price .price-duration {
+  font-size: var(--font-size-sm);
+  color: var(--color-medium-gray);
+}
+
+/* ---------------------------------------------
+   SERVICE GALLERY - SVC-031
+   --------------------------------------------- */
+.service-gallery {
+  background: var(--color-light-gray);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.gallery-thumb {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ---------------------------------------------
+   CTA SECTIONS - SVC-009, etc.
+   --------------------------------------------- */
+.service-cta-section {
+  background: var(--color-light-blue);
+  border-radius: var(--border-radius-xl);
+  padding: var(--spacing-2xl);
+}
+
+/* CTA Banner (reuse from home) */
+.cta-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #001a52 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='m36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Success Button for WhatsApp */
+.btn-success {
+  background-color: var(--color-whatsapp) !important;
+  border-color: var(--color-whatsapp) !important;
+}
+
+.btn-success:hover {
+  background-color: #20bd5a !important;
+  border-color: #20bd5a !important;
+}
+
+/* ---------------------------------------------
+   RESPONSIVE STYLES
+   --------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .service-tabs-nav .nav-link {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-xs);
+  }
+  
+  .service-tabs-nav .nav-link span {
+    display: none;
+  }
+  
+  .service-tabs-nav .nav-link i {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .service-hero {
+    min-height: 200px;
+    padding: var(--spacing-xl);
+  }
+  
+  .service-hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .health-check-card .row {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .health-check-price {
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .page-header {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .page-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .service-hero {
+    min-height: 180px;
+    padding: var(--spacing-lg);
+  }
+  
+  .service-hero-title {
+    font-size: var(--font-size-xl);
+  }
+  
+  .service-card-header {
+    padding: var(--spacing-md);
+  }
+  
+  .service-card-body {
+    padding: var(--spacing-md);
+  }
+  
+  .service-cta-section {
+    padding: var(--spacing-lg);
+  }
+  
+  .pricing-row {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .engine-type-badge {
+    padding: var(--spacing-xs);
+  }
+  
+  .engine-type-badge strong {
+    font-size: var(--font-size-md);
+  }
+  
+  .parts-category-card {
+    padding: var(--spacing-md);
+  }
+  
+  .parts-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
+  
+  .gallery-thumb {
+    height: 100px;
+  }
+  
+  .quality-tier-card {
+    padding: var(--spacing-md);
+  }
+  
+  .breaking-vehicle-item {
+    padding: var(--spacing-sm);
+  }
+  
+  .vehicle-parts {
+    justify-content: center;
+  }
+  
+  .health-check-price .price-amount {
+    font-size: var(--font-size-3xl);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 575.98px) {
+  .service-accordion .accordion-button {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .service-accordion .accordion-body {
+    padding: var(--spacing-md);
+  }
+  
+  .service-features-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .benefits-list li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

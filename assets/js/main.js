@@ -88,12 +88,17 @@ const RushSubaru = (() => {
   };
 
   /**
-   * Initialize scroll event handlers
+   * Initialize scroll event handlers - CORE-027
+   * Uses requestAnimationFrame for 60fps performance
+   * Handles: sticky nav, scroll progress, scroll-to-top visibility
    */
   const initScrollHandlers = () => {
     let ticking = false;
+    let lastScrollY = 0;
 
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
+      lastScrollY = window.scrollY;
+
       if (!ticking) {
         window.requestAnimationFrame(() => {
           updateScrollProgress();
@@ -103,16 +108,20 @@ const RushSubaru = (() => {
         });
         ticking = true;
       }
-    });
+    };
 
-    // Scroll to top button click
+    // Passive listener for better scroll performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Scroll to top button click - CORE-023
     if (elements.scrollToTop) {
       elements.scrollToTop.addEventListener('click', scrollToTop);
     }
   };
 
   /**
-   * Initialize AOS (Animate On Scroll)
+   * Initialize AOS (Animate On Scroll) - CORE-011 & CORE-026
+   * Configuration: offset 100px, duration 800ms, ease-out-cubic, once: true
    */
   const initAOS = () => {
     if (typeof AOS !== 'undefined') {
@@ -121,7 +130,8 @@ const RushSubaru = (() => {
         duration: CONFIG.animationDuration,
         easing: 'ease-out-cubic',
         once: true,
-        disable: 'mobile' // Optional: disable on mobile for performance
+        mirror: false,
+        anchorPlacement: 'top-bottom'
       });
     }
   };

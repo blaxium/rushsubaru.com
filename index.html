@@ -83,24 +83,25 @@
   <a href="#main-content" class="visually-hidden-focusable">Skip to main content</a>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
       <!-- Logo -->
       <a class="navbar-brand" href="index.html">
-        <img src=".github/assets/official_logo_blue.png" alt="Zaza Rush Subaru Logo" height="50">
+        <img src=".github/assets/official_logo_white.png" alt="Zaza Rush Subaru Logo" height="50">
       </a>
       
       <!-- Mobile Toggle -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <span class="visually-hidden">Menu</span>
       </button>
       
       <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link active" href="index.html" aria-current="page">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="services.html">Services</a>
@@ -114,8 +115,8 @@
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary text-white ms-lg-3 px-4" href="sell.html">Sell Your Subaru</a>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn" href="sell.html">Sell Your Subaru</a>
           </li>
         </ul>
       </div>
@@ -262,35 +263,38 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- Footer - CORE-016 to CORE-020 -->
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="row">
-        <!-- Company Info -->
+        <!-- Company Info - CORE-016 -->
         <div class="col-lg-4 mb-4 mb-lg-0">
           <img src=".github/assets/official_logo_white.png" alt="Zaza Rush Subaru" height="60" class="mb-3">
+          <p class="footer-slogan">"The Heart of Every Subaru"</p>
           <p>Zimbabwe's premier Subaru specialist since 2020. Your one-stop hub for engines, parts, services, and vehicle trading.</p>
+          <!-- Social Links - CORE-019 -->
           <div class="social-links">
-            <a href="https://wa.me/263776381498" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <a href="https://wa.me/263776381498" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-whatsapp">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="https://facebook.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Facebook">
+            <a href="https://facebook.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Facebook" class="social-facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://instagram.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://instagram.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Instagram" class="social-instagram">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
         </div>
         
-        <!-- Quick Links -->
+        <!-- Quick Links - CORE-017 -->
         <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
           <h5>Quick Links</h5>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="catalog.html">Parts Catalog</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="catalog.html">Parts</a></li>
+            <li><a href="catalog.html#gallery">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
@@ -307,10 +311,10 @@
           </ul>
         </div>
         
-        <!-- Contact Info -->
+        <!-- Contact Info - CORE-018 -->
         <div class="col-lg-3 col-md-4">
           <h5>Contact Us</h5>
-          <ul class="footer-links">
+          <ul class="footer-links footer-contact">
             <li>
               <a href="https://maps.google.com/?q=Number+9+Sherwood+Crescent+Waterfalls+Harare+Zimbabwe" target="_blank" rel="noopener">
                 <i class="fas fa-map-marker-alt"></i>

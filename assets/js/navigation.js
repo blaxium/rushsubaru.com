@@ -110,7 +110,7 @@ const Navigation = (() => {
   };
 
   /**
-   * Close mobile menu
+   * Close mobile menu - CORE-028
    */
   const closeMobileMenu = () => {
     if (!elements.navCollapse) return;
@@ -119,13 +119,30 @@ const Navigation = (() => {
     if (bsCollapse && elements.navCollapse.classList.contains('show')) {
       bsCollapse.hide();
     }
+    
+    // Remove body scroll lock
+    document.body.classList.remove('menu-open');
+    document.body.style.overflow = '';
   };
 
   /**
-   * Initialize mobile navigation handlers
+   * Open mobile menu with body scroll lock - CORE-028
+   */
+  const openMobileMenu = () => {
+    document.body.classList.add('menu-open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  /**
+   * Initialize mobile navigation handlers - CORE-028
+   * Includes body scroll lock, click-outside-to-close, and Escape key
    */
   const initMobileNav = () => {
     if (!elements.navCollapse || !elements.navToggler) return;
+
+    // Listen for Bootstrap collapse events to manage body scroll lock
+    elements.navCollapse.addEventListener('show.bs.collapse', openMobileMenu);
+    elements.navCollapse.addEventListener('hide.bs.collapse', closeMobileMenu);
 
     // Close menu when clicking a nav link
     elements.navLinks.forEach(link => {
@@ -136,7 +153,7 @@ const Navigation = (() => {
       });
     });
 
-    // Close menu when clicking outside
+    // Close menu when clicking outside - CORE-028
     document.addEventListener('click', (e) => {
       if (window.innerWidth < 992) {
         const isClickInside = elements.navbar.contains(e.target);
@@ -146,7 +163,7 @@ const Navigation = (() => {
       }
     });
 
-    // Handle escape key
+    // Handle escape key - CORE-028
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && elements.navCollapse.classList.contains('show')) {
         closeMobileMenu();

@@ -146,54 +146,94 @@
 }
 
 /* ---------------------------------------------
-   NAVIGATION
+   NAVIGATION - CORE-012 to CORE-015
    --------------------------------------------- */
 .navbar {
-  background-color: var(--color-white);
-  box-shadow: var(--shadow-md);
+  background-color: var(--color-primary);
+  box-shadow: none;
+  padding: var(--spacing-sm) 0;
   transition: all var(--transition-normal);
 }
 
 .navbar-brand img {
   height: 50px;
   width: auto;
+  max-width: 280px;
 }
 
 .navbar-nav .nav-link {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-medium);
-  color: var(--color-dark-gray);
+  color: var(--color-white);
   padding: var(--spacing-sm) var(--spacing-md) !important;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
+  position: relative;
 }
 
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active {
-  color: var(--color-primary);
+.navbar-nav .nav-link:hover {
+  color: var(--color-light-blue);
 }
 
+/* Active state indicator - CORE-014 */
 .navbar-nav .nav-link.active {
   font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
 }
 
-/* Mobile Navigation Toggle */
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing-md);
+  right: var(--spacing-md);
+  height: 2px;
+  background-color: var(--color-secondary);
+  border-radius: var(--border-radius-sm);
+}
+
+/* Mobile Navigation Toggle - CORE-013 */
 .navbar-toggler {
-  border: none;
+  border: 2px solid rgba(255, 255, 255, 0.5);
   padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
 }
 
 .navbar-toggler:focus {
-  box-shadow: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+  outline: none;
 }
 
-/* Sticky Navbar */
+/* Custom hamburger icon */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Sticky Navbar with shadow - CORE-015 */
 .navbar.scrolled {
   padding: var(--spacing-xs) 0;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-primary);
+}
+
+/* CTA Button in Nav */
+.navbar-nav .nav-link.btn {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-sm) var(--spacing-lg) !important;
+}
+
+.navbar-nav .nav-link.btn:hover {
+  background-color: var(--color-light-blue);
+  color: var(--color-primary);
+}
+
+.navbar-nav .nav-link.btn::after {
+  display: none;
 }
 
 /* ---------------------------------------------
-   FOOTER
+   FOOTER - CORE-016 to CORE-020
    --------------------------------------------- */
 .footer {
   background-color: var(--color-dark-gray);
@@ -205,6 +245,15 @@
   color: var(--color-white);
   font-weight: var(--font-weight-semibold);
   margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+/* CORE-016: Company slogan styling */
+.footer-slogan {
+  color: var(--color-light-blue);
+  font-style: italic;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
 }
 
 .footer p {
@@ -217,8 +266,9 @@
   transition: color var(--transition-fast);
 }
 
+/* CORE-017: Footer links with hover effect */
 .footer a:hover {
-  color: var(--color-white);
+  color: var(--color-secondary);
   text-decoration: none;
 }
 
@@ -238,15 +288,18 @@
   gap: var(--spacing-sm);
 }
 
-.footer-links a i {
+/* CORE-018: Contact info icons */
+.footer-contact a i {
   width: 20px;
-  color: var(--color-primary);
+  color: var(--color-secondary);
+  flex-shrink: 0;
 }
 
-/* Footer Social Links */
+/* CORE-019: Social Links with hover animations */
 .social-links {
   display: flex;
   gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
 }
 
 .social-links a {
@@ -258,14 +311,27 @@
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-full);
   transition: all var(--transition-fast);
+  font-size: var(--font-size-lg);
 }
 
 .social-links a:hover {
-  background-color: var(--color-primary);
-  transform: translateY(-3px);
+  transform: scale(1.1) translateY(-3px);
 }
 
-/* Footer Bottom */
+/* Social brand colors on hover */
+.social-links .social-whatsapp:hover {
+  background-color: var(--color-whatsapp);
+}
+
+.social-links .social-facebook:hover {
+  background-color: #1877F2;
+}
+
+.social-links .social-instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* CORE-020: Footer Bottom with credits */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: var(--spacing-lg);
@@ -285,6 +351,7 @@
 
 .developer-credits a {
   color: var(--color-secondary);
+  font-weight: var(--font-weight-medium);
 }
 
 .developer-credits a:hover {

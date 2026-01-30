@@ -329,14 +329,16 @@
 .duration-slower { animation-duration: 1200ms; }
 
 /* ---------------------------------------------
-   HOVER ANIMATIONS
+   HOVER ANIMATIONS - CORE-009
+   Interactive elements with transforms and transitions
    --------------------------------------------- */
 .hover-lift {
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .hover-lift:hover {
   transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .hover-scale {
@@ -347,12 +349,110 @@
   transform: scale(1.05);
 }
 
+.hover-scale-sm {
+  transition: transform var(--transition-normal);
+}
+
+.hover-scale-sm:hover {
+  transform: scale(1.02);
+}
+
 .hover-glow {
   transition: box-shadow var(--transition-normal);
 }
 
 .hover-glow:hover {
   box-shadow: 0 0 20px rgba(0, 51, 160, 0.3);
+}
+
+/* Card hover - CORE-009 */
+.card-hover {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Button hover color shift to Secondary Blue */
+.btn-hover-shift {
+  transition: all var(--transition-normal);
+}
+
+.btn-hover-shift:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+/* Link hover with underline animation */
+.link-hover-underline {
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.link-hover-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-secondary);
+  transition: width var(--transition-normal);
+}
+
+.link-hover-underline:hover {
+  color: var(--color-secondary);
+}
+
+.link-hover-underline:hover::after {
+  width: 100%;
+}
+
+/* ---------------------------------------------
+   TRANSITION UTILITY CLASSES - CORE-010
+   --------------------------------------------- */
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-opacity {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+.transition-color {
+  transition: color 0.3s ease-in-out;
+}
+
+.transition-background {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.transition-shadow {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.transition-border {
+  transition: border-color 0.3s ease-in-out;
+}
+
+/* Combined transitions */
+.transition-colors {
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Transition speed variants */
+.transition-fast {
+  transition-duration: 150ms;
+}
+
+.transition-slow {
+  transition-duration: 500ms;
 }
 
 /* ---------------------------------------------

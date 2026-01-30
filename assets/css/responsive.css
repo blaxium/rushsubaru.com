@@ -209,6 +209,44 @@
 }
 
 /* ---------------------------------------------
+   BODY SCROLL LOCK (Mobile Menu) - CORE-028
+   --------------------------------------------- */
+body.menu-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mobile menu backdrop */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    background-color: var(--color-primary);
+    padding: var(--spacing-lg);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .navbar-collapse.show .nav-link {
+    padding: var(--spacing-md) var(--spacing-sm) !important;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-collapse.show .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .navbar-collapse.show .nav-link.btn {
+    margin-top: var(--spacing-md);
+  }
+  
+  .navbar-collapse.show .nav-link.active::after {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------
    PRINT STYLES
    --------------------------------------------- */
 @media print {

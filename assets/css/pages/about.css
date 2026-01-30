@@ -1,0 +1,641 @@
+/* ==============================================
+   File: about.css
+   Project: Zaza Rush Subaru
+   Developer: bguvava
+   Last Updated: January 30, 2026
+   Description: About page specific styles (ABT-001 to ABT-015)
+   ============================================== */
+
+/* ---------------------------------------------
+   About Hero Section - ABT-001, ABT-002
+   --------------------------------------------- */
+.about-hero {
+  position: relative;
+  min-height: 60vh;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  background-image: url('../images/hero/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.about-hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 51, 160, 0.9) 0%, rgba(0, 85, 255, 0.8) 100%);
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero .breadcrumb {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.about-hero .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.about-hero .breadcrumb-item a:hover {
+  color: var(--color-white);
+}
+
+.about-hero .breadcrumb-item.active {
+  color: var(--color-white);
+}
+
+.about-hero .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.about-hero .hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-hero .hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.min-vh-60 {
+  min-height: 60vh;
+}
+
+/* ---------------------------------------------
+   Company Story Section - ABT-001, ABT-002, ABT-003
+   --------------------------------------------- */
+.company-story {
+  background: var(--color-white);
+}
+
+.story-image-wrapper {
+  position: relative;
+}
+
+.story-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  box-shadow: 0 10px 30px rgba(0, 51, 160, 0.3);
+}
+
+.experience-badge .years {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.experience-badge .text {
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0.25rem;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-light-blue);
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.section-badge.light {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.story-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.feature-item i {
+  color: var(--color-success);
+  font-size: 1.25rem;
+}
+
+/* ---------------------------------------------
+   Mission & Vision Section - ABT-004 to ABT-007
+   --------------------------------------------- */
+.mission-vision {
+  background: var(--color-light-gray);
+}
+
+.mv-card {
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.mv-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+}
+
+.mission-card .mv-icon {
+  background: var(--color-light-blue);
+  color: var(--color-primary);
+}
+
+.vision-card .mv-icon {
+  background: rgba(40, 167, 69, 0.1);
+  color: var(--color-success);
+}
+
+.mv-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.mv-statement {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-primary);
+  padding: 1rem;
+  background: var(--color-light-blue);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.vision-card .mv-statement {
+  background: rgba(40, 167, 69, 0.1);
+  color: var(--color-success);
+}
+
+.mv-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mv-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.mv-points li:last-child {
+  border-bottom: none;
+}
+
+.mv-points li i {
+  color: var(--color-primary);
+  margin-top: 0.25rem;
+}
+
+.vision-card .mv-points li i {
+  color: var(--color-success);
+}
+
+/* ---------------------------------------------
+   Why Subaru Section - ABT-008 to ABT-010
+   --------------------------------------------- */
+.why-subaru {
+  background: var(--color-white);
+}
+
+.expertise-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.expertise-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 40px rgba(0, 51, 160, 0.1);
+}
+
+.expertise-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--color-light-blue);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+}
+
+.expertise-icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.expertise-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+.expertise-text {
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expertise-list li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.expertise-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+/* ---------------------------------------------
+   Core Values Section - ABT-011, ABT-012
+   --------------------------------------------- */
+.core-values {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+}
+
+.value-card {
+  padding: 2rem 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: var(--color-white);
+  transition: background 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.value-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.value-text {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* ---------------------------------------------
+   Workshop Gallery Section - ABT-013, ABT-014
+   --------------------------------------------- */
+.workshop-gallery {
+  background: var(--color-light-gray);
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;
+  cursor: pointer;
+}
+
+.gallery-item.large {
+  height: 415px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 51, 160, 0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-overlay i {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-overlay span {
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* ---------------------------------------------
+   About CTA Section
+   --------------------------------------------- */
+.about-cta {
+  background: var(--color-white);
+}
+
+.about-cta .cta-card {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  border-radius: 20px;
+  padding: 3rem;
+  color: var(--color-white);
+}
+
+.about-cta .cta-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-cta .cta-text {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------
+   Responsive Styles - ABT-015
+   --------------------------------------------- */
+@media (max-width: 991.98px) {
+  .about-hero .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-hero .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .experience-badge {
+    width: 100px;
+    height: 100px;
+    right: 10px;
+    bottom: -10px;
+  }
+  
+  .experience-badge .years {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .gallery-item.large {
+    height: 250px;
+  }
+  
+  .about-cta .cta-card {
+    padding: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-hero {
+    min-height: 50vh;
+    padding-top: 80px;
+    background-attachment: scroll;
+  }
+  
+  .about-hero .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-stats {
+    justify-content: center;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+  }
+  
+  .mv-card {
+    padding: 1.5rem;
+  }
+  
+  .mv-statement {
+    font-size: 1.125rem;
+  }
+  
+  .expertise-card {
+    padding: 1.5rem;
+  }
+  
+  .gallery-item {
+    height: 180px;
+  }
+  
+  .gallery-item.large {
+    height: 200px;
+  }
+  
+  .value-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .about-hero .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .hero-stats {
+    gap: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  .experience-badge {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .experience-badge .years {
+    font-size: 1.25rem;
+  }
+  
+  .experience-badge .text {
+    font-size: 0.625rem;
+  }
+}

@@ -1,0 +1,127 @@
+# ==============================================
+# Zaza Rush Subaru - Git Ignore Configuration
+# Project: www.rushsubaru.com
+# Developer: bguvava
+# ==============================================
+
+# ─────────────────────────────────────────────
+# OPERATING SYSTEM FILES
+# ─────────────────────────────────────────────
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ─────────────────────────────────────────────
+# IDE / EDITOR FILES
+# ─────────────────────────────────────────────
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ─────────────────────────────────────────────
+# DEPENDENCIES
+# ─────────────────────────────────────────────
+node_modules/
+vendor/
+bower_components/
+
+# ─────────────────────────────────────────────
+# ENVIRONMENT & CONFIGURATION
+# ─────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+config.local.php
+
+# ─────────────────────────────────────────────
+# BUILD OUTPUT
+# ─────────────────────────────────────────────
+dist/
+build/
+*.min.css
+*.min.js
+
+# ─────────────────────────────────────────────
+# LOGS & TEMPORARY FILES
+# ─────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.cache
+logs/
+php/logs/*.log
+
+# ─────────────────────────────────────────────
+# SENSITIVE & BACKUP FILES
+# ─────────────────────────────────────────────
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# ─────────────────────────────────────────────
+# TESTING & COVERAGE
+# ─────────────────────────────────────────────
+coverage/
+.nyc_output/
+*.lcov
+
+# ─────────────────────────────────────────────
+# COMPILED FILES
+# ─────────────────────────────────────────────
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ─────────────────────────────────────────────
+# PACKAGE FILES
+# ─────────────────────────────────────────────
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ─────────────────────────────────────────────
+# SPECIFIC PROJECT EXCLUSIONS
+# ─────────────────────────────────────────────
+# Uploaded images (will be managed separately)
+# assets/images/uploads/
+
+# Email templates with sensitive data
+# php/email-config.php

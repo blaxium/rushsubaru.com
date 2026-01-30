@@ -1,0 +1,318 @@
+# =============================================================================
+# ZAZA RUSH SUBARU - PROJECT SETTINGS
+# =============================================================================
+# This file guides GitHub Copilot to maintain project development context.
+# Version: 1.0
+# Last Updated: January 30, 2026
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# PROJECT IDENTIFICATION
+# -----------------------------------------------------------------------------
+project:
+  name: "Zaza Rush Subaru"
+  slogan: "The Heart of Every Subaru"
+  domain: "www.rushsubaru.com"
+  type: "Business Website"
+  industry: "Automotive - Subaru Specialist"
+  location: "Zimbabwe"
+  currency: "USD"
+  language: "English"
+
+# -----------------------------------------------------------------------------
+# DEVELOPER INFORMATION
+# -----------------------------------------------------------------------------
+developer:
+  name: "bguvava"
+  website: "bguvava.com"
+  credit_line: "Developed with ❤️ by bguvava"
+
+# -----------------------------------------------------------------------------
+# CLIENT INFORMATION
+# -----------------------------------------------------------------------------
+client:
+  business_name: "Zaza Rush Subaru"
+  address: "Number 9 Sherwood Crescent, Waterfalls, Zindoga Shops, Harare, Zimbabwe"
+  phone: "+263 77 638 1498"
+  whatsapp: "+263776381498"
+  email_primary: "sales@rushsubaru.com"
+  email_secondary: "zaza.rushsubaru@gmail.com"
+  email_info: "info@rushsubaru.com"
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT ENVIRONMENT
+# -----------------------------------------------------------------------------
+environment:
+  local:
+    server: "XAMPP"
+    domain: "rushsubaru.local"
+    port: 80
+    php_version: "8.2+"
+    document_root: "c:/xampp/htdocs/rushsubaru.com"
+  
+  production:
+    hosting: "Cyberpanel Shared Hosting"
+    domain: "www.rushsubaru.com"
+    ssl: "Let's Encrypt"
+    php_version: "8.2+"
+
+# -----------------------------------------------------------------------------
+# VERSION CONTROL
+# -----------------------------------------------------------------------------
+version_control:
+  platform: "GitHub"
+  branches:
+    production: "main"
+    development: "develop"
+    features: "feature/*"
+    hotfixes: "hotfix/*"
+  
+  commit_conventions:
+    feat: "New feature"
+    fix: "Bug fix"
+    docs: "Documentation"
+    style: "Formatting, styling"
+    refactor: "Code refactoring"
+    test: "Adding tests"
+    chore: "Maintenance tasks"
+
+# -----------------------------------------------------------------------------
+# TECHNOLOGY STACK
+# -----------------------------------------------------------------------------
+tech_stack:
+  frontend:
+    markup: "HTML5"
+    styling: "CSS3"
+    framework: "Bootstrap 5.3.x"
+    scripting: "JavaScript ES6+"
+    
+  libraries:
+    animations: "AOS 2.3.x"
+    icons: "Font Awesome 6.x"
+    fonts: "Google Fonts (Montserrat, Open Sans)"
+    modals: "SweetAlert2 11.x"
+    gallery: "Lightbox2 2.11.x"
+    carousel: "Swiper 11.x"
+    pdf: "jsPDF 2.5.x"
+    utilities: "Pure.css 3.x"
+    
+  backend:
+    language: "PHP 8.2+"
+    email: "PHP mail() / PHPMailer"
+    
+  tools:
+    editor: "VS Code"
+    local_server: "XAMPP"
+    version_control: "Git"
+    repository: "GitHub"
+
+# -----------------------------------------------------------------------------
+# BRAND COLORS (CSS CUSTOM PROPERTIES)
+# -----------------------------------------------------------------------------
+colors:
+  primary_blue: "#0033A0"
+  secondary_blue: "#0055FF"
+  light_blue: "#E6F0FF"
+  white: "#FFFFFF"
+  dark_gray: "#333333"
+  light_gray: "#F5F5F5"
+  success_green: "#28A745"
+  error_red: "#DC3545"
+  whatsapp_green: "#25D366"
+
+# -----------------------------------------------------------------------------
+# TYPOGRAPHY
+# -----------------------------------------------------------------------------
+typography:
+  headings:
+    font_family: "Montserrat"
+    weights: [400, 500, 600, 700]
+  body:
+    font_family: "Open Sans"
+    weights: [400, 600]
+  base_size: "16px"
+
+# -----------------------------------------------------------------------------
+# RESPONSIVE BREAKPOINTS
+# -----------------------------------------------------------------------------
+breakpoints:
+  mobile_small: "320px"
+  mobile_medium: "375px"
+  mobile_large: "428px"
+  tablet_portrait: "768px"
+  tablet_landscape: "1024px"
+  desktop: "1200px"
+  desktop_large: "1920px"
+
+# -----------------------------------------------------------------------------
+# ANIMATION SETTINGS (AOS)
+# -----------------------------------------------------------------------------
+animations:
+  aos:
+    offset: 100
+    duration: 800
+    easing: "ease-out-cubic"
+    once: true
+  transitions:
+    default_duration: "0.3s"
+    default_easing: "ease-in-out"
+
+# -----------------------------------------------------------------------------
+# PAGE INVENTORY
+# -----------------------------------------------------------------------------
+pages:
+  - name: "Homepage"
+    file: "index.html"
+    priority: 1
+    
+  - name: "Services"
+    file: "services.html"
+    priority: 2
+    
+  - name: "Parts Catalog"
+    file: "catalog.html"
+    priority: 3
+    
+  - name: "About Us"
+    file: "about.html"
+    priority: 4
+    
+  - name: "Contact"
+    file: "contact.html"
+    priority: 5
+    
+  - name: "Sell Your Subaru"
+    file: "sell.html"
+    priority: 6
+
+# -----------------------------------------------------------------------------
+# GLOBAL UI COMPONENTS (Required on ALL pages)
+# -----------------------------------------------------------------------------
+global_components:
+  scroll_progress:
+    position: "top"
+    height: "3px"
+    color: "primary_blue"
+    
+  scroll_to_top:
+    position: "bottom-right"
+    offset: "20px"
+    show_after: "300px"
+    size: "50px"
+    
+  whatsapp_button:
+    position: "bottom-left"
+    offset: "20px"
+    size: "60px"
+    color: "whatsapp_green"
+    animation: "pulse"
+    
+  developer_credits:
+    position: "footer"
+    text: "Developed with ❤️ by bguvava"
+
+# -----------------------------------------------------------------------------
+# FORM SECURITY
+# -----------------------------------------------------------------------------
+security:
+  honeypot:
+    enabled: true
+    field_name: "website"
+  time_validation:
+    enabled: true
+    minimum_seconds: 3
+  rate_limiting:
+    enabled: true
+    max_per_hour: 10
+  input_sanitization:
+    enabled: true
+    methods:
+      - "htmlspecialchars"
+      - "strip_tags"
+      - "filter_var"
+
+# -----------------------------------------------------------------------------
+# DEVELOPMENT PHASES
+# -----------------------------------------------------------------------------
+phases:
+  - id: 1
+    name: "Environment Setup"
+    prefix: "ENV"
+    requirements: 25
+    
+  - id: 2
+    name: "Core Infrastructure"
+    prefix: "CORE"
+    requirements: 28
+    
+  - id: 3
+    name: "Homepage"
+    prefix: "HOME"
+    requirements: 35
+    
+  - id: 4
+    name: "Services Page"
+    prefix: "SVC"
+    requirements: 32
+    
+  - id: 5
+    name: "Catalog Page"
+    prefix: "CAT"
+    requirements: 33
+    
+  - id: 6
+    name: "About & Contact"
+    prefix: "ABT/CON"
+    requirements: 40
+    
+  - id: 7
+    name: "Sell Your Subaru & API"
+    prefix: "SELL/API"
+    requirements: 48
+    
+  - id: 8
+    name: "Testing & Deployment"
+    prefix: "TEST/DOC/DEPLOY"
+    requirements: 60
+
+# -----------------------------------------------------------------------------
+# SUCCESS CRITERIA
+# -----------------------------------------------------------------------------
+success_criteria:
+  test_pass_rate: "100%"
+  page_load_time: "<3 seconds"
+  lighthouse_score: ">80"
+  console_errors: 0
+  accessibility_compliance: "WCAG AA"
+  browsers:
+    - "Chrome"
+    - "Firefox"
+    - "Safari"
+    - "Edge"
+
+# -----------------------------------------------------------------------------
+# FILE ORGANIZATION
+# -----------------------------------------------------------------------------
+file_structure:
+  documentation: "docs/{page_name}/"
+  tests: "tests/{page_name}/"
+  api: "api/v1/"
+  assets:
+    css: "assets/css/"
+    js: "assets/js/"
+    images: "assets/images/"
+    fonts: "assets/fonts/"
+  data: "data/"
+  php: "php/"
+
+# -----------------------------------------------------------------------------
+# CONTEXT FILES (Load for development)
+# -----------------------------------------------------------------------------
+context_files:
+  - ".github/prompts/project_description.md"
+  - ".github/prompts/product_mvp.md"
+  - ".github/prompts/settings.yml"
+  - ".github/prompts/coding_style.json"
+  - ".github/prompts/copilot_instructions.md"
+  - ".github/prompts/skills.md"
+  - ".github/user_requirements.md"

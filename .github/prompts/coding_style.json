@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Zaza Rush Subaru - Coding Style Guide",
+  "description": "Comprehensive coding style and conventions for the Rush Subaru website project",
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-30",
+  "project": "Zaza Rush Subaru",
+  "developer": "bguvava",
+
+  "general": {
+    "indentation": {
+      "type": "spaces",
+      "size": 2,
+      "description": "Use 2 spaces for indentation across all file types"
+    },
+    "lineEndings": "LF",
+    "maxLineLength": 120,
+    "trailingWhitespace": "trim",
+    "finalNewline": true,
+    "encoding": "UTF-8"
+  },
+
+  "html": {
+    "doctype": "<!DOCTYPE html>",
+    "language": "en",
+    "indentation": 2,
+    "attributeQuotes": "double",
+    "selfClosingTags": false,
+    "lowercaseTags": true,
+    "lowercaseAttributes": true,
+    
+    "structure": {
+      "description": "Follow semantic HTML5 structure",
+      "requiredMetaTags": [
+        "<meta charset=\"UTF-8\">",
+        "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+        "<meta name=\"description\" content=\"...\">",
+        "<meta name=\"keywords\" content=\"...\">",
+        "<meta name=\"author\" content=\"bguvava\">"
+      ],
+      "semanticElements": [
+        "header", "nav", "main", "section", "article", "aside", "footer"
+      ]
+    },
+    
+    "conventions": {
+      "classNaming": "kebab-case",
+      "idNaming": "camelCase",
+      "dataAttributes": "data-*",
+      "accessibilityRequired": [
+        "alt attributes on images",
+        "aria-labels on interactive elements",
+        "role attributes where needed",
+        "tabindex for focus management"
+      ]
+    },
+    
+    "template": {
+      "fileHeader": "<!-- ============================================\n     Page: {PAGE_NAME}\n     Project: Zaza Rush Subaru\n     Developer: bguvava\n     Last Updated: {DATE}\n============================================ -->"
+    },
+    
+    "ordering": {
+      "headElements": [
+        "charset meta",
+        "viewport meta",
+        "title",
+        "SEO meta tags",
+        "Open Graph tags",
+        "preconnect links",
+        "stylesheet links (CDN first, then local)",
+        "preload links"
+      ],
+      "bodyEndElements": [
+        "CDN scripts",
+        "vendor scripts",
+        "utility scripts",
+        "page-specific scripts",
+        "initialization scripts"
+      ]
+    }
+  },
+
+  "css": {
+    "indentation": 2,
+    "selectorFormat": "kebab-case",
+    "declarationOrder": "grouped",
+    "singleLineMaxProperties": 1,
+    "colorFormat": "hex",
+    "unitPreference": {
+      "font-size": "rem",
+      "spacing": "rem",
+      "borders": "px",
+      "media-queries": "px"
+    },
+    
+    "fileStructure": {
+      "variables.css": "CSS custom properties only",
+      "style.css": "Main styles and base elements",
+      "components.css": "Reusable component styles",
+      "responsive.css": "Media queries and breakpoints",
+      "animations.css": "Keyframes and animation classes"
+    },
+    
+    "customProperties": {
+      "prefix": "--",
+      "naming": "category-name",
+      "examples": {
+        "colors": "--color-primary, --color-secondary",
+        "typography": "--font-heading, --font-body",
+        "spacing": "--spacing-sm, --spacing-md, --spacing-lg",
+        "breakpoints": "--breakpoint-tablet, --breakpoint-desktop"
+      }
+    },
+    
+    "declarationGroups": {
+      "order": [
+        "positioning (position, top, right, bottom, left, z-index)",
+        "box model (display, flex, grid, width, height, margin, padding)",
+        "typography (font-*, text-*, color)",
+        "visual (background, border, box-shadow, opacity)",
+        "animation (transition, animation, transform)"
+      ]
+    },
+    
+    "mediaQueries": {
+      "approach": "mobile-first",
+      "breakpoints": {
+        "tablet": "min-width: 768px",
+        "desktop": "min-width: 1024px",
+        "large": "min-width: 1200px"
+      },
+      "placement": "at end of stylesheet or in responsive.css"
+    },
+    
+    "bootstrapOverrides": {
+      "method": "custom classes, not !important",
+      "location": "after Bootstrap imports",
+      "naming": "prefix with 'rs-' for Rush Subaru specific"
+    },
+    
+    "template": {
+      "fileHeader": "/* ==============================================\n   File: {FILE_NAME}\n   Project: Zaza Rush Subaru\n   Developer: bguvava\n   Last Updated: {DATE}\n   ============================================== */",
+      "sectionComment": "/* ---------------------------------------------\n   {SECTION_NAME}\n   --------------------------------------------- */"
+    }
+  },
+
+  "javascript": {
+    "version": "ES6+",
+    "indentation": 2,
+    "quotes": "single",
+    "semicolons": true,
+    "strictMode": true,
+    "modulePattern": "ES6 modules or IIFE",
+    
+    "naming": {
+      "variables": "camelCase",
+      "constants": "UPPER_SNAKE_CASE",
+      "functions": "camelCase",
+      "classes": "PascalCase",
+      "files": "kebab-case.js",
+      "privateMembers": "_prefixWithUnderscore"
+    },
+    
+    "fileStructure": {
+      "main.js": "Core initialization and global handlers",
+      "navigation.js": "Navigation component functionality",
+      "forms.js": "Form validation and submission",
+      "catalog.js": "Catalog filtering and search",
+      "whatsapp.js": "WhatsApp integration helpers",
+      "pdf-generator.js": "PDF generation functionality"
+    },
+    
+    "conventions": {
+      "useConst": "for values that won't be reassigned",
+      "useLet": "for values that will be reassigned",
+      "avoidVar": true,
+      "arrowFunctions": "preferred for callbacks",
+      "templateLiterals": "for string concatenation",
+      "destructuring": "use when extracting multiple values",
+      "spreadOperator": "use for array/object operations"
+    },
+    
+    "asyncPatterns": {
+      "preferred": "async/await",
+      "fallback": "Promises",
+      "avoid": "callbacks (except event handlers)"
+    },
+    
+    "domManipulation": {
+      "selectors": "use querySelector/querySelectorAll",
+      "caching": "cache DOM selections in variables",
+      "eventDelegation": "use for dynamic elements",
+      "eventListeners": "use addEventListener, not inline handlers"
+    },
+    
+    "errorHandling": {
+      "tryCatch": "wrap async operations",
+      "userFeedback": "use SweetAlert2 for user-facing errors",
+      "logging": "console.error for development only"
+    },
+    
+    "comments": {
+      "jsdoc": "use for functions",
+      "inline": "for complex logic only",
+      "todoFormat": "// TODO: description"
+    },
+    
+    "template": {
+      "fileHeader": "/**\n * ==============================================\n * File: {FILE_NAME}\n * Project: Zaza Rush Subaru\n * Developer: bguvava\n * Last Updated: {DATE}\n * ==============================================\n */\n\n'use strict';",
+      "functionDoc": "/**\n * {DESCRIPTION}\n * @param {Type} paramName - Description\n * @returns {Type} Description\n */"
+    }
+  },
+
+  "php": {
+    "version": "8.2+",
+    "indentation": 4,
+    "shortOpenTags": false,
+    "closingTag": "omit in pure PHP files",
+    
+    "naming": {
+      "variables": "$camelCase",
+      "constants": "UPPER_SNAKE_CASE",
+      "functions": "camelCase",
+      "classes": "PascalCase",
+      "files": "kebab-case.php"
+    },
+    
+    "fileStructure": {
+      "contact-handler.php": "Contact form processing",
+      "vehicle-handler.php": "Vehicle submission processing",
+      "email-template.php": "HTML email template",
+      "config.php": "Configuration constants"
+    },
+    
+    "security": {
+      "inputSanitization": [
+        "htmlspecialchars()",
+        "strip_tags()",
+        "filter_var()"
+      ],
+      "sqlInjection": "prepared statements only",
+      "xssPrevention": "escape all output",
+      "csrfProtection": "token validation"
+    },
+    
+    "errorHandling": {
+      "production": "log errors, show generic messages",
+      "development": "display_errors = On",
+      "logging": "error_log() to php/logs/"
+    },
+    
+    "template": {
+      "fileHeader": "<?php\n/**\n * ==============================================\n * File: {FILE_NAME}\n * Project: Zaza Rush Subaru\n * Developer: bguvava\n * Last Updated: {DATE}\n * ==============================================\n */\n\ndeclare(strict_types=1);"
+    }
+  },
+
+  "json": {
+    "indentation": 2,
+    "trailingCommas": false,
+    "keyQuotes": "double",
+    "stringQuotes": "double",
+    
+    "catalogSchema": {
+      "required": ["id", "sku", "title", "category", "condition", "inStock"],
+      "optional": ["description", "price", "models", "yearFrom", "yearTo", "images", "dateAdded"]
+    }
+  },
+
+  "git": {
+    "commitMessageFormat": "{type}: {subject}",
+    "commitTypes": {
+      "feat": "New feature",
+      "fix": "Bug fix",
+      "docs": "Documentation only",
+      "style": "Formatting, no code change",
+      "refactor": "Code refactoring",
+      "test": "Adding tests",
+      "chore": "Maintenance"
+    },
+    "subjectMaxLength": 72,
+    "bodyWrap": 80,
+    "branchNaming": {
+      "feature": "feature/{ticket-id}-{brief-description}",
+      "bugfix": "fix/{ticket-id}-{brief-description}",
+      "hotfix": "hotfix/{brief-description}"
+    }
+  },
+
+  "documentation": {
+    "location": "docs/{page_name}/",
+    "requiredFiles": [
+      "page_overview.md",
+      "components.md", 
+      "test_results.md"
+    ],
+    "format": "Markdown",
+    "diagramTool": "ASCII art or Mermaid"
+  },
+
+  "testing": {
+    "location": "tests/{page_name}/",
+    "naming": "{feature}_test.{ext}",
+    "categories": [
+      "unit",
+      "functional",
+      "responsive",
+      "cross-browser",
+      "performance",
+      "accessibility",
+      "security"
+    ]
+  },
+
+  "accessibility": {
+    "standard": "WCAG 2.1 AA",
+    "requirements": {
+      "altText": "All images must have descriptive alt text",
+      "ariaLabels": "All interactive elements must be labeled",
+      "focusIndicators": "Visible focus states required",
+      "colorContrast": "4.5:1 minimum for normal text",
+      "keyboardNavigation": "All functionality keyboard accessible",
+      "screenReaderCompatibility": "Test with VoiceOver/NVDA"
+    }
+  },
+
+  "performance": {
+    "targets": {
+      "pageLoadTime": "<3 seconds on 3G",
+      "firstContentfulPaint": "<1.5 seconds",
+      "lighthouseScore": ">80 all categories"
+    },
+    "optimizations": {
+      "images": "WebP format, lazy loading, responsive srcset",
+      "css": "Critical CSS inline, rest deferred",
+      "javascript": "Defer non-critical, async where possible",
+      "fonts": "Preconnect, font-display: swap"
+    }
+  },
+
+  "ide": {
+    "vscode": {
+      "requiredExtensions": [
+        "Live Server",
+        "Prettier",
+        "ESLint",
+        "HTML CSS Support",
+        "Bootstrap 5 Quick Snippets",
+        "GitLens",
+        "Git Graph"
+      ],
+      "settings": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true
+      }
+    }
+  }
+}

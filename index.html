@@ -74,6 +74,9 @@
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <!-- Page-Specific CSS -->
+  <link rel="stylesheet" href="assets/css/pages/home.css">
 </head>
 <body>
   <!-- Scroll Progress Indicator -->
@@ -125,135 +128,758 @@
 
   <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero Section Placeholder -->
-    <section class="hero bg-light-blue py-5">
-      <div class="container">
-        <div class="row align-items-center min-vh-75">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h1 class="display-4 fw-bold text-dark mb-4">
-              The Heart of Every <span class="text-primary">Subaru</span>
+    
+    <!-- ============================================
+         HERO SECTION - HOME-001 to HOME-006
+         Full-width hero with background, logo, tagline, CTAs
+    ============================================ -->
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="row align-items-center min-vh-80">
+          <div class="col-lg-7 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1000">
+            <!-- Logo - HOME-002 -->
+            <img src=".github/assets/official_logo_white.png" 
+                 alt="Zaza Rush Subaru Logo" 
+                 class="hero-logo mb-4"
+                 width="280" height="auto">
+            
+            <!-- Tagline - HOME-003 -->
+            <h1 class="hero-title display-3 fw-bold text-white mb-3">
+              <span class="tagline-animated">The Heart of Every</span>
+              <span class="text-highlight d-block">Subaru</span>
             </h1>
-            <p class="lead mb-4">
-              Zimbabwe's premier Subaru specialist. Quality engines, genuine parts, expert services, and vehicle trading - all under one roof.
+            
+            <p class="hero-subtitle lead text-white-75 mb-4">
+              Zimbabwe's premier Subaru specialist. Quality engines, genuine parts, 
+              expert services, and vehicle trading — all under one roof.
             </p>
-            <div class="d-flex flex-column flex-sm-row gap-3">
-              <a href="catalog.html" class="btn btn-primary btn-lg">
+            
+            <!-- CTAs - HOME-004 & HOME-005 -->
+            <div class="hero-cta d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+              <a href="catalog.html" class="btn btn-light btn-lg px-4 py-3">
                 <i class="fas fa-search me-2"></i>Browse Parts
               </a>
-              <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20Zaza%20Rush%20Subaru%20services." 
-                 class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp me-2"></i>Chat on WhatsApp
+              <a href="#contact-form" class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="fas fa-envelope me-2"></i>Contact Us
               </a>
             </div>
+            
+            <!-- Trust Badges -->
+            <div class="hero-badges mt-5 d-flex flex-wrap gap-4 justify-content-center justify-content-lg-start" data-aos="fade-up" data-aos-delay="300">
+              <div class="badge-item text-white">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>5+ Years Experience</span>
+              </div>
+              <div class="badge-item text-white">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>Quality Guaranteed</span>
+              </div>
+              <div class="badge-item text-white">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                <span>Nationwide Shipping</span>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
-            <div class="text-center">
-              <img src=".github/assets/products/front.jpeg" alt="Zaza Rush Subaru Store" class="img-fluid rounded shadow-lg">
+          
+          <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-image-wrapper">
+              <img src=".github/assets/products/front.jpeg" 
+                   alt="Zaza Rush Subaru Store Front" 
+                   class="img-fluid rounded-4 shadow-lg hero-image"
+                   loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll-indicator">
+        <a href="#why-choose-us" class="scroll-down" aria-label="Scroll to content">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================
+         VALUE PROPOSITION - HOME-007 to HOME-010
+         Why Choose Us section with 6 benefit cards
+    ============================================ -->
+    <section class="why-choose-us py-5" id="why-choose-us">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle text-primary fw-semibold text-uppercase">Why Choose Us</span>
+          <h2 class="section-title mt-2">Why Choose Zaza Rush Subaru?</h2>
+          <p class="section-description text-muted mx-auto" style="max-width: 600px;">
+            We're more than just a parts supplier — we're Subaru enthusiasts dedicated to keeping your vehicle running at its best.
+          </p>
+        </div>
+        
+        <div class="row g-4">
+          <!-- Expertise -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-medal fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Subaru Expertise</h5>
+              <p class="benefit-text text-muted mb-0">
+                Specialized knowledge in all Subaru models, from classic EJ engines to modern FA series.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Quality Parts -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-gem fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Quality Parts</h5>
+              <p class="benefit-text text-muted mb-0">
+                Genuine OEM, trusted aftermarket, and thoroughly tested used parts.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Fast Service -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-bolt fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Fast Service</h5>
+              <p class="benefit-text text-muted mb-0">
+                Quick turnaround times for orders and service appointments.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Fair Prices -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-tags fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Fair Prices</h5>
+              <p class="benefit-text text-muted mb-0">
+                Competitive pricing without compromising on quality or service.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Warranty -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Warranty</h5>
+              <p class="benefit-text text-muted mb-0">
+                Peace of mind with warranty coverage on engines and select parts.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Customer Support -->
+          <div class="col-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="benefit-card text-center p-4 h-100">
+              <div class="benefit-icon mb-3">
+                <i class="fas fa-headset fa-3x text-primary"></i>
+              </div>
+              <h5 class="benefit-title">Customer Support</h5>
+              <p class="benefit-text text-muted mb-0">
+                Friendly, knowledgeable team ready to help via phone, email, or WhatsApp.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Overview Placeholder -->
-    <section class="services-overview py-5">
+    <!-- ============================================
+         SERVICES OVERVIEW - HOME-011 to HOME-014
+         6 service cards with icons and links
+    ============================================ -->
+    <section class="services-overview bg-light py-5" id="services">
       <div class="container">
         <div class="section-header text-center mb-5" data-aos="fade-up">
-          <h2>Our Services</h2>
-          <p>Comprehensive Subaru solutions for every need</p>
+          <span class="section-subtitle text-primary fw-semibold text-uppercase">What We Offer</span>
+          <h2 class="section-title mt-2">Our Services</h2>
+          <p class="section-description text-muted mx-auto" style="max-width: 600px;">
+            Comprehensive Subaru solutions for every need — from engines and parts to full vehicle services.
+          </p>
         </div>
+        
         <div class="row g-4">
           <!-- Engine Sales -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card h-100 text-center p-4">
-              <div class="card-body">
-                <i class="fas fa-engine fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Engine Sales</h5>
-                <p class="card-text">Quality EJ & FA series engines - new and low-mileage used options available.</p>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-car-battery fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Engine Sales & Swaps</h5>
+                <p class="card-text text-muted">
+                  Quality EJ & FA series engines — new imports and low-mileage used options. 
+                  Complete with installation support.
+                </p>
+                <a href="services.html?tab=engines" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
+          
           <!-- Parts Department -->
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card h-100 text-center p-4">
-              <div class="card-body">
-                <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Parts Department</h5>
-                <p class="card-text">Genuine, OEM, and quality aftermarket spare parts for all Subaru models.</p>
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-cogs fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Parts Department</h5>
+                <p class="card-text text-muted">
+                  Genuine, OEM, and quality aftermarket spare parts for all Subaru models. 
+                  Fast sourcing and delivery.
+                </p>
+                <a href="services.html?tab=parts" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
-          <!-- Specialist Garage -->
+          
+          <!-- Car Breaking -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-car-crash fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Car Breaking</h5>
+                <p class="card-text text-muted">
+                  Full vehicle dismantling for parts recovery. Get quality used parts 
+                  at affordable prices.
+                </p>
+                <a href="services.html?tab=breaking" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Vehicle Trading -->
           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card h-100 text-center p-4">
-              <div class="card-body">
-                <i class="fas fa-wrench fa-3x text-primary mb-3"></i>
-                <h5 class="card-title">Specialist Garage</h5>
-                <p class="card-text">Expert diagnostics, maintenance, repairs, and performance tuning.</p>
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-exchange-alt fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Vehicle Trading</h5>
+                <p class="card-text text-muted">
+                  Buying and selling runner/non-runner Subaru vehicles. 
+                  Fair valuations and quick transactions.
+                </p>
+                <a href="services.html?tab=trading" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Specialist Garage -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-wrench fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Specialist Garage</h5>
+                <p class="card-text text-muted">
+                  Expert maintenance, repairs, and performance upgrades. 
+                  Subaru-specific diagnostics and tuning.
+                </p>
+                <a href="services.html?tab=garage" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Diagnostics & Tuning -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-card card h-100 border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="service-icon-wrapper mb-3">
+                  <i class="fas fa-laptop-code fa-2x text-primary"></i>
+                </div>
+                <h5 class="card-title fw-bold">Diagnostics & Tuning</h5>
+                <p class="card-text text-muted">
+                  Advanced ECU diagnostics, fault code reading, and performance tuning 
+                  for optimal power.
+                </p>
+                <a href="services.html?tab=diagnostics" class="service-link text-primary fw-semibold">
+                  Learn More <i class="fas fa-arrow-right ms-1"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
+        
         <div class="text-center mt-5" data-aos="fade-up">
-          <a href="services.html" class="btn btn-secondary btn-lg">
+          <a href="services.html" class="btn btn-primary btn-lg px-5">
             View All Services <i class="fas fa-arrow-right ms-2"></i>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Quick Contact Section -->
-    <section class="quick-contact bg-light py-5">
+    <!-- ============================================
+         FEATURED INVENTORY - HOME-015 to HOME-018
+         Swiper carousel with catalog items
+    ============================================ -->
+    <section class="featured-inventory py-5" id="featured">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-            <h2>Get in Touch</h2>
-            <p class="mb-4">Have questions? We're here to help. Reach out via phone, email, or visit our shop.</p>
-            <ul class="list-unstyled">
-              <li class="mb-3">
-                <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                Number 9 Sherwood Crescent, Waterfalls, Zindoga Shops, Harare
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-phone text-primary me-3"></i>
-                <a href="tel:+263776381498">+263 77 638 1498</a>
-              </li>
-              <li class="mb-3">
-                <i class="fas fa-envelope text-primary me-3"></i>
-                <a href="mailto:sales@rushsubaru.com">sales@rushsubaru.com</a>
-              </li>
-            </ul>
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle text-primary fw-semibold text-uppercase">In Stock Now</span>
+          <h2 class="section-title mt-2">Featured Inventory</h2>
+          <p class="section-description text-muted mx-auto" style="max-width: 600px;">
+            Browse our selection of quality engines, parts, and vehicles currently available.
+          </p>
+        </div>
+        
+        <!-- Swiper Carousel -->
+        <div class="swiper featured-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 - EJ25 Engine -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/ej25.png" 
+                       alt="EJ25 SOHC Engine" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-success position-absolute top-0 end-0 m-2">In Stock</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Engines</span>
+                  <h5 class="card-title fw-bold mt-1">EJ25 SOHC Engine</h5>
+                  <p class="card-text text-muted small">Low mileage, tested & ready for installation. Fits Forester, Outback, Legacy.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">Contact for Price</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20EJ25%20SOHC%20Engine.%20Please%20provide%20pricing%20and%20availability." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 2 - EJ20 Turbo -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/ej20.png" 
+                       alt="EJ20 Turbo Engine" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-success position-absolute top-0 end-0 m-2">In Stock</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Engines</span>
+                  <h5 class="card-title fw-bold mt-1">EJ20 Turbo Engine</h5>
+                  <p class="card-text text-muted small">WRX/STI performance engine. Complete with turbo, manifolds included.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">Contact for Price</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20EJ20%20Turbo%20Engine.%20Please%20provide%20pricing%20and%20availability." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 3 - TD04 Turbo -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/td04.png" 
+                       alt="TD04 Turbocharger" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-success position-absolute top-0 end-0 m-2">In Stock</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Turbo Parts</span>
+                  <h5 class="card-title fw-bold mt-1">TD04 Turbocharger</h5>
+                  <p class="card-text text-muted small">OEM Subaru turbo unit. Rebuilt with new seals and balanced.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">$450 USD</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20TD04%20Turbocharger.%20Please%20confirm%20availability." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 4 - Brembo Brakes -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/brakes.png" 
+                       alt="Brembo Brake Kit" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-2">Limited</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Brakes</span>
+                  <h5 class="card-title fw-bold mt-1">STI Brembo Brake Kit</h5>
+                  <p class="card-text text-muted small">4-pot front calipers with rotors. Direct bolt-on upgrade for WRX.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">$850 USD</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20STI%20Brembo%20Brake%20Kit.%20Please%20confirm%20availability." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 5 - Coilovers -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/suspension.png" 
+                       alt="Adjustable Coilovers" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-success position-absolute top-0 end-0 m-2">In Stock</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Suspension</span>
+                  <h5 class="card-title fw-bold mt-1">Adjustable Coilovers</h5>
+                  <p class="card-text text-muted small">Height & damping adjustable. Fits GD/GG Impreza chassis.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">$650 USD</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20Adjustable%20Coilovers.%20Please%20confirm%20availability." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slide 6 - Subaru Forester -->
+            <div class="swiper-slide">
+              <div class="product-card card h-100 border-0 shadow-sm">
+                <div class="product-image-wrapper position-relative">
+                  <img src=".github/assets/products/forester.png" 
+                       alt="Subaru Forester SG5" 
+                       class="card-img-top"
+                       loading="lazy">
+                  <span class="badge bg-info position-absolute top-0 end-0 m-2">For Sale</span>
+                </div>
+                <div class="card-body p-4">
+                  <span class="product-category text-muted small">Vehicles</span>
+                  <h5 class="card-title fw-bold mt-1">Subaru Forester SG5</h5>
+                  <p class="card-text text-muted small">2005, turbo, automatic. Well maintained, full service history.</p>
+                  <div class="d-flex justify-content-between align-items-center mt-3">
+                    <span class="product-price fw-bold text-primary">Contact for Price</span>
+                    <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20the%20Subaru%20Forester%20SG5.%20Please%20provide%20details%20and%20pricing." 
+                       class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener">
+                      Inquire <i class="fab fa-whatsapp ms-1"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
+          <!-- Swiper Navigation -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+        
+        <div class="text-center mt-5" data-aos="fade-up">
+          <a href="catalog.html" class="btn btn-primary btn-lg px-5">
+            Browse Full Catalog <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS - HOME-019 to HOME-021
+         Customer reviews carousel with auto-rotation
+    ============================================ -->
+    <section class="testimonials bg-light-blue py-5" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle text-primary fw-semibold text-uppercase">Testimonials</span>
+          <h2 class="section-title mt-2">What Our Customers Say</h2>
+          <p class="section-description text-muted mx-auto" style="max-width: 600px;">
+            Don't just take our word for it — hear from Subaru owners who trust us with their vehicles.
+          </p>
+        </div>
+        
+        <!-- Testimonials Carousel -->
+        <div class="swiper testimonials-swiper" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Testimonial 1 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card p-4 p-md-5 text-center">
+                <div class="testimonial-quote mb-3">
+                  <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                </div>
+                <p class="testimonial-text mb-4">
+                  "Excellent service! Found the exact EJ25 engine I needed for my Forester. 
+                  The team was knowledgeable, installation was smooth, and the engine runs perfectly. 
+                  Highly recommend Zaza Rush Subaru!"
+                </p>
+                <div class="testimonial-rating mb-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Tatenda M.</h6>
+                  <small class="text-muted">Subaru Forester Owner, Harare</small>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card p-4 p-md-5 text-center">
+                <div class="testimonial-quote mb-3">
+                  <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                </div>
+                <p class="testimonial-text mb-4">
+                  "Best place for Subaru parts in Zimbabwe! I've been sourcing parts from them 
+                  for my WRX for over a year. Fair prices, genuine parts, and quick WhatsApp 
+                  responses. These guys know their stuff."
+                </p>
+                <div class="testimonial-rating mb-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Brian K.</h6>
+                  <small class="text-muted">Subaru WRX Owner, Bulawayo</small>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card p-4 p-md-5 text-center">
+                <div class="testimonial-quote mb-3">
+                  <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                </div>
+                <p class="testimonial-text mb-4">
+                  "Sold my old Impreza to them — hassle-free process and fair price. 
+                  No time wasters, just professional service. Will definitely recommend 
+                  to anyone looking to sell their Subaru."
+                </p>
+                <div class="testimonial-rating mb-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                </div>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Sarah N.</h6>
+                  <small class="text-muted">Former Impreza Owner, Harare</small>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Testimonial 4 -->
+            <div class="swiper-slide">
+              <div class="testimonial-card p-4 p-md-5 text-center">
+                <div class="testimonial-quote mb-3">
+                  <i class="fas fa-quote-left fa-2x text-primary opacity-25"></i>
+                </div>
+                <p class="testimonial-text mb-4">
+                  "Their diagnostic service saved me thousands! Other mechanics couldn't figure out 
+                  my Legacy's issue, but Zaza Rush diagnosed it in an hour. Fixed it same day. 
+                  True Subaru specialists!"
+                </p>
+                <div class="testimonial-rating mb-3">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+                <div class="testimonial-author">
+                  <h6 class="fw-bold mb-0">Michael C.</h6>
+                  <small class="text-muted">Subaru Legacy Owner, Chitungwiza</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Swiper Pagination -->
+          <div class="swiper-pagination mt-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         QUICK CONTACT FORM - HOME-022 to HOME-026
+         Form with validation, honeypot, SweetAlert2
+    ============================================ -->
+    <section class="quick-contact py-5" id="contact-form">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-subtitle text-primary fw-semibold text-uppercase">Get in Touch</span>
+            <h2 class="section-title mt-2 mb-4">Send Us a Message</h2>
+            <p class="text-muted mb-4">
+              Have a question about our products or services? Fill out the form and we'll get back to you within 24 hours.
+            </p>
+            
+            <div class="contact-info-list">
+              <div class="contact-item d-flex align-items-start mb-4">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Visit Us</h6>
+                  <p class="text-muted mb-0">Number 9 Sherwood Crescent,<br>Waterfalls, Zindoga Shops, Harare</p>
+                </div>
+              </div>
+              
+              <div class="contact-item d-flex align-items-start mb-4">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-phone fa-lg text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Call Us</h6>
+                  <p class="text-muted mb-0">
+                    <a href="tel:+263776381498" class="text-decoration-none">+263 77 638 1498</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="contact-item d-flex align-items-start mb-4">
+                <div class="contact-icon me-3">
+                  <i class="fas fa-envelope fa-lg text-primary"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Email Us</h6>
+                  <p class="text-muted mb-0">
+                    <a href="mailto:sales@rushsubaru.com" class="text-decoration-none">sales@rushsubaru.com</a>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="contact-item d-flex align-items-start">
+                <div class="contact-icon me-3">
+                  <i class="fab fa-whatsapp fa-lg text-success"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">WhatsApp</h6>
+                  <p class="text-muted mb-0">
+                    <a href="https://wa.me/263776381498" target="_blank" rel="noopener" class="text-decoration-none">
+                      Chat with us instantly
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div class="col-lg-6" data-aos="fade-left">
-            <div class="card shadow">
-              <div class="card-body p-4">
-                <h5 class="card-title mb-4">Send us a Message</h5>
-                <form id="quick-contact-form" data-validate action="php/contact-handler.php" method="POST">
-                  <!-- Honeypot Field (Anti-spam) -->
-                  <div class="honeypot-field">
-                    <label for="website">Website</label>
+            <div class="contact-form-wrapper card border-0 shadow-lg">
+              <div class="card-body p-4 p-md-5">
+                <form id="quick-contact-form" data-validate action="php/contact-handler.php" method="POST" novalidate>
+                  <!-- Honeypot Field (Anti-spam) - HOME-023 -->
+                  <div class="honeypot-field" aria-hidden="true">
+                    <label for="website">Website (Leave empty)</label>
                     <input type="text" name="website" id="website" tabindex="-1" autocomplete="off">
                   </div>
                   
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Your Name *</label>
-                    <input type="text" class="form-control" id="name" name="name" required placeholder="John Doe">
+                  <!-- Hidden timestamp for validation -->
+                  <input type="hidden" name="form_time" id="form_time" value="">
+                  <input type="hidden" name="source_page" value="homepage">
+                  
+                  <div class="row g-3">
+                    <!-- Full Name -->
+                    <div class="col-md-6">
+                      <label for="contact-name" class="form-label fw-semibold">Full Name *</label>
+                      <input type="text" class="form-control form-control-lg" id="contact-name" name="name" 
+                             required minlength="2" placeholder="John Doe">
+                      <div class="invalid-feedback">Please enter your name.</div>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="col-md-6">
+                      <label for="contact-email" class="form-label fw-semibold">Email Address *</label>
+                      <input type="email" class="form-control form-control-lg" id="contact-email" name="email" 
+                             required placeholder="john@example.com">
+                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                      <label for="contact-phone" class="form-label fw-semibold">Phone Number</label>
+                      <input type="tel" class="form-control form-control-lg" id="contact-phone" name="phone" 
+                             placeholder="+263 77 123 4567" pattern="[\+]?[0-9\s\-]{10,}">
+                      <div class="invalid-feedback">Please enter a valid phone number.</div>
+                    </div>
+                    
+                    <!-- Subject - HOME-022 -->
+                    <div class="col-md-6">
+                      <label for="contact-subject" class="form-label fw-semibold">Subject *</label>
+                      <select class="form-select form-select-lg" id="contact-subject" name="subject" required>
+                        <option value="" selected disabled>Select a subject</option>
+                        <option value="Parts Inquiry">Parts Inquiry</option>
+                        <option value="Service Booking">Service Booking</option>
+                        <option value="Vehicle Trading">Vehicle Trading</option>
+                        <option value="General Question">General Question</option>
+                      </select>
+                      <div class="invalid-feedback">Please select a subject.</div>
+                    </div>
+                    
+                    <!-- Message -->
+                    <div class="col-12">
+                      <label for="contact-message" class="form-label fw-semibold">Message *</label>
+                      <textarea class="form-control form-control-lg" id="contact-message" name="message" 
+                                rows="4" required minlength="20" placeholder="How can we help you? (minimum 20 characters)"></textarea>
+                      <div class="invalid-feedback">Please enter at least 20 characters.</div>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary btn-lg w-100 py-3" id="contact-submit">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loading d-none">
+                          <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                          Sending...
+                        </span>
+                      </button>
+                    </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label">Email Address *</label>
-                    <input type="email" class="form-control" id="email" name="email" required placeholder="john@example.com">
-                  </div>
-                  <div class="mb-3">
-                    <label for="phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+263 77 123 4567">
-                  </div>
-                  <div class="mb-3">
-                    <label for="message" class="form-label">Message *</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" required placeholder="How can we help you?"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    <i class="fas fa-paper-plane me-2"></i>Send Message
-                  </button>
                 </form>
               </div>
             </div>
@@ -261,6 +887,122 @@
         </div>
       </div>
     </section>
+
+    <!-- ============================================
+         LOCATION PREVIEW - HOME-027 to HOME-029
+         Google Maps embed, address, directions
+    ============================================ -->
+    <section class="location-preview bg-light py-5" id="location">
+      <div class="container">
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle text-primary fw-semibold text-uppercase">Find Us</span>
+          <h2 class="section-title mt-2">Visit Our Shop</h2>
+          <p class="section-description text-muted mx-auto" style="max-width: 600px;">
+            Located in Waterfalls, Harare — easy to find and plenty of parking available.
+          </p>
+        </div>
+        
+        <div class="row g-4 align-items-center">
+          <!-- Map -->
+          <div class="col-lg-8" data-aos="fade-right">
+            <div class="map-wrapper rounded-4 overflow-hidden shadow">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.567!2d31.0345!3d-17.8667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDUyJzAwLjEiUyAzMcKwMDInMDQuMiJF!5e0!3m2!1sen!2szw!4v1706000000000!5m2!1sen!2szw" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Zaza Rush Subaru Location Map">
+              </iframe>
+            </div>
+          </div>
+          
+          <!-- Location Info -->
+          <div class="col-lg-4" data-aos="fade-left">
+            <div class="location-info-card p-4 bg-white rounded-4 shadow h-100">
+              <h4 class="fw-bold mb-4">
+                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                Our Location
+              </h4>
+              
+              <div class="location-address mb-4">
+                <p class="mb-2 fw-semibold">Zaza Rush Subaru</p>
+                <p class="text-muted mb-0">
+                  Number 9 Sherwood Crescent,<br>
+                  Waterfalls, Zindoga Shops,<br>
+                  Harare, Zimbabwe
+                </p>
+              </div>
+              
+              <div class="business-hours mb-4">
+                <h6 class="fw-bold mb-3">
+                  <i class="fas fa-clock text-primary me-2"></i>
+                  Business Hours
+                </h6>
+                <ul class="list-unstyled mb-0">
+                  <li class="d-flex justify-content-between mb-2">
+                    <span>Monday - Friday</span>
+                    <span class="fw-semibold">8:00 AM - 5:00 PM</span>
+                  </li>
+                  <li class="d-flex justify-content-between mb-2">
+                    <span>Saturday</span>
+                    <span class="fw-semibold">8:00 AM - 1:00 PM</span>
+                  </li>
+                  <li class="d-flex justify-content-between">
+                    <span>Sunday</span>
+                    <span class="text-danger fw-semibold">Closed</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="location-contact mb-4">
+                <p class="mb-2">
+                  <i class="fas fa-phone text-primary me-2"></i>
+                  <a href="tel:+263776381498" class="text-decoration-none">+263 77 638 1498</a>
+                </p>
+              </div>
+              
+              <!-- Get Directions Button - HOME-029 -->
+              <a href="https://www.google.com/maps/dir/?api=1&destination=Number+9+Sherwood+Crescent+Waterfalls+Harare+Zimbabwe" 
+                 class="btn btn-primary w-100" target="_blank" rel="noopener">
+                <i class="fas fa-directions me-2"></i>
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CTA BANNER - HOME-030 to HOME-031
+         Final call-to-action section
+    ============================================ -->
+    <section class="cta-banner py-5" id="cta">
+      <div class="container">
+        <div class="cta-content text-center text-white py-4" data-aos="zoom-in">
+          <h2 class="cta-title display-5 fw-bold mb-3">Ready to Find Your Part?</h2>
+          <p class="cta-subtitle lead mb-4 opacity-90">
+            Whether you need an engine, parts, or expert service — we're here to help. 
+            Get in touch today!
+          </p>
+          <div class="cta-buttons d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20Zaza%20Rush%20Subaru%20services.%20Can%20you%20help%20me%20find%20a%20part?" 
+               class="btn btn-success btn-lg px-4 py-3" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp me-2"></i>
+              Chat on WhatsApp
+            </a>
+            <a href="#contact-form" class="btn btn-outline-light btn-lg px-4 py-3">
+              <i class="fas fa-envelope me-2"></i>
+              Send Us a Message
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer - CORE-016 to CORE-020 -->
@@ -384,5 +1126,8 @@
   <script src="assets/js/navigation.js"></script>
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/whatsapp.js"></script>
+  
+  <!-- Page-Specific JavaScript -->
+  <script src="assets/js/pages/home.js"></script>
 </body>
 </html>

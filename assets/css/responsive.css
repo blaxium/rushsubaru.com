@@ -1,0 +1,272 @@
+/* ==============================================
+   File: responsive.css
+   Project: Zaza Rush Subaru
+   Developer: bguvava
+   Last Updated: January 30, 2026
+   Description: Media queries and responsive styles
+   ============================================== */
+
+/* ---------------------------------------------
+   MOBILE FIRST APPROACH
+   Default styles are for mobile (< 768px)
+   --------------------------------------------- */
+
+/* ---------------------------------------------
+   TABLET PORTRAIT (>= 768px)
+   --------------------------------------------- */
+@media (min-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: var(--font-size-5xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-4xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Sections */
+  section {
+    padding: var(--spacing-4xl) 0;
+  }
+
+  /* Navigation */
+  .navbar-brand img {
+    height: 60px;
+  }
+
+  /* WhatsApp Float - Show tooltip */
+  .whatsapp-float .tooltip {
+    display: block;
+  }
+}
+
+/* ---------------------------------------------
+   TABLET LANDSCAPE / SMALL DESKTOP (>= 1024px)
+   --------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Container */
+  .container {
+    max-width: var(--container-lg);
+  }
+
+  /* Navigation */
+  .navbar-nav .nav-link {
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+  }
+}
+
+/* ---------------------------------------------
+   DESKTOP (>= 1200px)
+   --------------------------------------------- */
+@media (min-width: 1200px) {
+  /* Container */
+  .container {
+    max-width: var(--container-xl);
+  }
+
+  /* Sections */
+  section {
+    padding: 5rem 0;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 5rem 0 var(--spacing-xl);
+  }
+}
+
+/* ---------------------------------------------
+   LARGE DESKTOP (>= 1400px)
+   --------------------------------------------- */
+@media (min-width: 1400px) {
+  /* Container */
+  .container {
+    max-width: var(--container-xxl);
+  }
+}
+
+/* ---------------------------------------------
+   MOBILE SPECIFIC ADJUSTMENTS
+   --------------------------------------------- */
+@media (max-width: 767.98px) {
+  /* Typography Scaling */
+  h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);
+  }
+
+  /* Buttons - Full Width on Mobile */
+  .btn-mobile-full {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Scroll to Top - Smaller on mobile */
+  .scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* WhatsApp Float - Smaller on mobile */
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .whatsapp-float i {
+    font-size: 24px;
+  }
+
+  /* Hide tooltip on mobile */
+  .whatsapp-float .tooltip {
+    display: none;
+  }
+
+  /* Section Spacing */
+  section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  /* Cards */
+  .card {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+  }
+
+  .footer-links {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  /* Navigation Mobile Menu */
+  .navbar-collapse {
+    padding: var(--spacing-md) 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: var(--spacing-md) var(--spacing-sm) !important;
+    text-align: center;
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+
+  .navbar-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ---------------------------------------------
+   SMALL MOBILE (< 375px)
+   --------------------------------------------- */
+@media (max-width: 374.98px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* ---------------------------------------------
+   PRINT STYLES
+   --------------------------------------------- */
+@media print {
+  /* Hide non-essential elements */
+  .navbar,
+  .scroll-progress,
+  .scroll-to-top,
+  .whatsapp-float,
+  .footer {
+    display: none !important;
+  }
+
+  /* Ensure content is visible */
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  /* Show full URLs for links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* ---------------------------------------------
+   REDUCED MOTION PREFERENCE
+   --------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .whatsapp-float::before {
+    animation: none;
+  }
+}
+
+/* ---------------------------------------------
+   DARK MODE PREFERENCE (Future Enhancement)
+   --------------------------------------------- */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-white: #1a1a1a;
+    --color-dark-gray: #f5f5f5;
+    --color-light-gray: #2d2d2d;
+  }
+} */

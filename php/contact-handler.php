@@ -4,44 +4,52 @@
  * File: contact-handler.php
  * Project: Zaza Rush Subaru
  * Developer: bguvava
- * Last Updated: January 30, 2026
- * Description: Contact form processing and email sending
+ * Last Updated: January 31, 2026
+ * Description: Contact form processing and email sending (API-011)
  * ==============================================
  */
 
-// Enable error reporting for debugging (disable in production)
-// error_reporting(E_ALL);
-// ini_set('display_errors', 1);
-
-// Set headers for JSON response
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-
-// Configuration
-$config = [
-    'recipient_email' => 'info@zazarushsubaru.co.zw',
-    'recipient_name' => 'Zaza Rush Subaru',
-    'from_email' => 'noreply@zazarushsubaru.co.zw',
-    'subject_prefix' => '[Website Contact] ',
-    'min_submission_time' => 3000, // 3 seconds in milliseconds
-    'max_message_length' => 2000
-];
+// Check if accessed via API
+if (!defined('API_ACCESS')) {
+    // Direct access - set up standalone mode
+    define('API_ACCESS', true);
+    require_once __DIR__ . '/../api/v1/config.php';
+    setCorsHeaders();
+    header('Content-Type: application/json; charset=utf-8');
+    $requestId = generateRequestId();
+    
+    // Only accept POST
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        http_response_code(405);
+        echo json_encode(['success' => false, 'message' => 'Method not allowed', 'request_id' => $requestId]);
+        exit;
+    }
+    
+    // Check honeypot
+    if (!empty($_POST['website'])) {
+        echo json_encode(['success' => true, 'message' => 'Your message has been received.', 'request_id' => $requestId]);
+        exit;
+    }
+}
 
 /**
  * Send JSON response and exit
  */
-function sendResponse($success, $message, $code = 200) {
+function sendResponse($success, $message, $data = null, $errors = null, $code = 200) {
+    global $requestId;
     http_response_code($code);
     echo json_encode([
         'success' => $success,
-        'message' => $message
+        'message' => $message,
+        'request_id' => $requestId ?? null,
+        'data' => $data,
+        'errors' => $errors
     ]);
     exit;
 }
 
 /**
- * Sanitize input string
+ * Sanitize input string (API-015)
  */
 function sanitize($input) {
     return htmlspecialchars(trim($input), ENT_QUOTES, 'UTF-8');
@@ -55,50 +63,19 @@ function isValidEmail($email) {
 }
 
 /**
- * Log form submission
+ * Log form submission (API-017)
  */
 function logSubmission($data, $status, $reason = '') {
-    $logFile = __DIR__ . '/logs/contact-submissions.log';
-    $logDir = dirname($logFile);
-    
-    // Create logs directory if it doesn't exist
-    if (!is_dir($logDir)) {
-        mkdir($logDir, 0755, true);
-    }
-    
-    $logEntry = date('Y-m-d H:i:s') . ' | ';
-    $logEntry .= $status . ' | ';
-    $logEntry .= 'IP: ' . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . ' | ';
-    $logEntry .= 'Email: ' . ($data['email'] ?? 'none') . ' | ';
-    $logEntry .= 'Subject: ' . ($data['subject'] ?? 'none') . ' | ';
-    $logEntry .= 'Reason: ' . $reason . PHP_EOL;
-    
-    file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
-}
-
-// Only accept POST requests
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    sendResponse(false, 'Invalid request method', 405);
-}
-
-// Check honeypot field (CON-012)
-if (!empty($_POST['website'])) {
-    logSubmission($_POST, 'BLOCKED', 'Honeypot filled');
-    // Return fake success to not alert bots
-    sendResponse(true, 'Your message has been received.');
-}
-
-// Check time-based validation (CON-013)
-if (isset($_POST['formTimestamp'])) {
-    $loadTime = intval($_POST['formTimestamp']);
-    $currentTime = round(microtime(true) * 1000);
-    $timeDiff = $currentTime - $loadTime;
-    
-    if ($timeDiff < $config['min_submission_time']) {
-        logSubmission($_POST, 'BLOCKED', 'Submitted too quickly');
-        // Return fake success to not alert bots
-        sendResponse(true, 'Your message has been received.');
-    }
+    global $requestId;
+    logMessage($status === 'SUCCESS' ? 'info' : ($status === 'BLOCKED' ? 'warning' : 'error'), 
+        'Contact form: ' . $status,
+        [
+            'email' => $data['email'] ?? 'none',
+            'subject' => $data['subject'] ?? 'none',
+            'reason' => $reason,
+            'request_id' => $requestId ?? null
+        ]
+    );
 }
 
 // Get and sanitize form data
@@ -108,31 +85,28 @@ $phone = sanitize($_POST['phone'] ?? '');
 $subject = sanitize($_POST['subject'] ?? 'general');
 $message = sanitize($_POST['message'] ?? '');
 
-// Validate required fields (CON-023)
+// Validate required fields
+$errors = [];
+
 if (empty($name)) {
-    logSubmission($_POST, 'INVALID', 'Missing name');
-    sendResponse(false, 'Please provide your name.', 400);
+    $errors['name'] = 'Please provide your name.';
 }
 
 if (empty($email)) {
-    logSubmission($_POST, 'INVALID', 'Missing email');
-    sendResponse(false, 'Please provide your email address.', 400);
-}
-
-if (!isValidEmail($email)) {
-    logSubmission($_POST, 'INVALID', 'Invalid email format');
-    sendResponse(false, 'Please provide a valid email address.', 400);
+    $errors['email'] = 'Please provide your email address.';
+} elseif (!isValidEmail($email)) {
+    $errors['email'] = 'Please provide a valid email address.';
 }
 
 if (empty($message)) {
-    logSubmission($_POST, 'INVALID', 'Missing message');
-    sendResponse(false, 'Please provide a message.', 400);
+    $errors['message'] = 'Please provide a message.';
+} elseif (strlen($message) > MAX_MESSAGE_LENGTH) {
+    $errors['message'] = 'Message is too long. Please keep it under 2000 characters.';
 }
 
-// Validate message length
-if (strlen($message) > $config['max_message_length']) {
-    logSubmission($_POST, 'INVALID', 'Message too long');
-    sendResponse(false, 'Message is too long. Please keep it under 2000 characters.', 400);
+if (!empty($errors)) {
+    logSubmission($_POST, 'INVALID', 'Validation failed');
+    sendResponse(false, ERROR_MESSAGES['validation'], null, $errors, 400);
 }
 
 // Map subject values to readable text
@@ -146,7 +120,10 @@ $subjectMap = [
 ];
 
 $subjectText = $subjectMap[$subject] ?? 'General Inquiry';
-$emailSubject = $config['subject_prefix'] . $subjectText . ' from ' . $name;
+$emailSubject = '[Website Contact] ' . $subjectText . ' from ' . $name;
+
+// Generate submission ID
+$submissionId = 'CON_' . date('Ymd') . '_' . substr(md5(uniqid((string)mt_rand(), true)), 0, 8);
 
 // Build email body
 $emailBody = "
@@ -204,14 +181,15 @@ $emailBody = "
 $headers = [
     'MIME-Version: 1.0',
     'Content-type: text/html; charset=UTF-8',
-    'From: ' . $config['from_email'],
+    'From: ' . FROM_EMAIL,
     'Reply-To: ' . $email,
-    'X-Mailer: PHP/' . phpversion()
+    'X-Mailer: PHP/' . phpversion(),
+    'X-Submission-ID: ' . $submissionId
 ];
 
 // Attempt to send email
 $mailSent = mail(
-    $config['recipient_email'],
+    ADMIN_EMAIL,
     $emailSubject,
     $emailBody,
     implode("\r\n", $headers)
@@ -219,8 +197,10 @@ $mailSent = mail(
 
 if ($mailSent) {
     logSubmission($_POST, 'SUCCESS', 'Email sent successfully');
-    sendResponse(true, 'Thank you for your message! We will get back to you within 24 hours.');
+    sendResponse(true, 'Thank you for your message! We will get back to you within 24 hours.', [
+        'submission_id' => $submissionId
+    ]);
 } else {
     logSubmission($_POST, 'FAILED', 'Mail function failed');
-    sendResponse(false, 'Sorry, there was an error sending your message. Please try again or contact us directly.', 500);
+    sendResponse(false, ERROR_MESSAGES['email_failed'], null, null, 500);
 }

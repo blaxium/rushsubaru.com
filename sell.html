@@ -12,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <!-- SEO Meta Tags -->
-  <title>Sell Your Subaru | Zaza Rush Subaru - Zimbabwe's Premier Subaru Specialist</title>
+  <title>Sell Your Subaru | Zaza Rush Subaru - Zimbabwe's leading Subaru Specialist</title>
   <meta name="description" content="Sell your Subaru to Zimbabwe's specialist. Get fair market valuation, quick cash payment, and hassle-free process. We buy all Subaru models - runners and non-runners.">
   <meta name="keywords" content="sell subaru zimbabwe, sell my subaru, cash for subaru, subaru buyer harare, sell wrx, sell forester">
   <meta name="author" content="bguvava">
@@ -67,20 +67,26 @@
 </head>
 <body>
   <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
+      <!-- Logo -->
       <a class="navbar-brand" href="index.html">
-        <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="50" class="d-inline-block align-top logo-white">
-        <img src="assets/images/logo/logo-color.png" alt="Zaza Rush Subaru" height="50" class="d-inline-block align-top logo-color d-none">
+        <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru Logo" height="50">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <span class="visually-hidden">Menu</span>
       </button>
+      
+      <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -91,48 +97,55 @@
             <a class="nav-link" href="catalog.html">Parts Catalog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="sell.html">Sell Your Subaru</a>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn active" href="sell.html" aria-current="page">Sell Your Subaru</a>
           </li>
         </ul>
-        <a href="tel:+263776381498" class="btn btn-primary ms-lg-3 nav-cta">
-          <i class="fas fa-phone me-2"></i>Call Now
-        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section - SELL-001 -->
-  <section class="sell-hero min-vh-50 d-flex align-items-center">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center text-white">
-          <nav aria-label="breadcrumb" data-aos="fade-down">
-            <ol class="breadcrumb justify-content-center">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Sell Your Subaru</li>
-            </ol>
-          </nav>
-          <h1 class="hero-title display-4 fw-bold mb-3" data-aos="fade-up">
-            Sell Your Subaru to<br>Zimbabwe's Specialist
-          </h1>
-          <p class="hero-subtitle lead mb-4" data-aos="fade-up" data-aos-delay="100">
-            Get a fair market valuation and quick cash payment for your Subaru. 
-            We buy all models, years, and conditions - runners and non-runners.
-          </p>
-          <a href="#sellForm" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="200">
-            <i class="fas fa-car me-2"></i>Submit Your Vehicle
-          </a>
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- ============================================
+         PAGE HEADER - SELL-001
+    ============================================ -->
+    <section class="page-header py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8" data-aos="fade-right">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Sell Your Subaru</li>
+              </ol>
+            </nav>
+            <h1 class="page-title display-4 fw-bold text-white mb-3">
+              Sell Your Subaru to Zimbabwe's Specialist
+            </h1>
+            <p class="page-subtitle lead text-white-75">
+              Get a fair market valuation and quick cash payment for your Subaru. 
+              We buy all models, years, and conditions - runners and non-runners.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
+            <a href="https://wa.me/263776381498?text=Hello!%20I'd%20like%20to%20sell%20my%20Subaru." 
+               class="btn btn-light btn-lg mb-2 d-block d-sm-inline-block" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp me-2"></i>Quick Inquiry
+            </a>
+            <a href="#sellForm" class="btn btn-outline-light btn-lg d-block d-sm-inline-block">
+              <i class="fas fa-car me-2"></i>Submit Vehicle
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <!-- Benefits Section - SELL-002 -->
   <section class="sell-benefits section-padding">
@@ -242,64 +255,60 @@
         </p>
       </div>
       
-      <div class="row">
-        <div class="col-lg-10 mx-auto">
-          <div class="process-timeline">
-            <!-- Step 1 -->
-            <div class="process-step" data-aos="fade-right" data-aos-delay="100">
-              <div class="step-number">1</div>
-              <div class="step-content">
-                <div class="step-icon">
-                  <i class="fas fa-edit"></i>
-                </div>
-                <h3 class="step-title">Submit Vehicle Details</h3>
-                <p class="step-text">
-                  Fill out the form below with your vehicle information and upload photos. The more details you provide, the more accurate our initial valuation.
-                </p>
-              </div>
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="process-card h-100">
+            <div class="process-number">1</div>
+            <div class="process-icon">
+              <i class="fas fa-edit"></i>
             </div>
-            
-            <!-- Step 2 -->
-            <div class="process-step" data-aos="fade-left" data-aos-delay="200">
-              <div class="step-number">2</div>
-              <div class="step-content">
-                <div class="step-icon">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <h3 class="step-title">Receive Valuation Call</h3>
-                <p class="step-text">
-                  Our team will review your submission and call you within 24-48 hours with an initial valuation based on the information provided.
-                </p>
-              </div>
+            <h3 class="process-title">Submit Vehicle Details</h3>
+            <p class="process-text">
+              Fill out the form below with your vehicle information and upload photos. The more details you provide, the more accurate our initial valuation.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="process-card h-100">
+            <div class="process-number">2</div>
+            <div class="process-icon">
+              <i class="fas fa-phone-alt"></i>
             </div>
-            
-            <!-- Step 3 -->
-            <div class="process-step" data-aos="fade-right" data-aos-delay="300">
-              <div class="step-number">3</div>
-              <div class="step-content">
-                <div class="step-icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <h3 class="step-title">Vehicle Inspection</h3>
-                <p class="step-text">
-                  Bring your vehicle to our workshop or we can arrange to view it at your location. Our experts will conduct a thorough inspection.
-                </p>
-              </div>
+            <h3 class="process-title">Receive Valuation Call</h3>
+            <p class="process-text">
+              Our team will review your submission and call you within 24-48 hours with an initial valuation based on the information provided.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="process-card h-100">
+            <div class="process-number">3</div>
+            <div class="process-icon">
+              <i class="fas fa-search"></i>
             </div>
-            
-            <!-- Step 4 -->
-            <div class="process-step" data-aos="fade-left" data-aos-delay="400">
-              <div class="step-number">4</div>
-              <div class="step-content">
-                <div class="step-icon">
-                  <i class="fas fa-hand-holding-usd"></i>
-                </div>
-                <h3 class="step-title">Get Paid</h3>
-                <p class="step-text">
-                  Accept our offer and get paid on the spot. We handle all the paperwork - you just walk away with cash in hand.
-                </p>
-              </div>
+            <h3 class="process-title">Vehicle Inspection</h3>
+            <p class="process-text">
+              Bring your vehicle to our workshop or we can arrange to view it at your location. Our experts will conduct a thorough inspection.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="process-card h-100">
+            <div class="process-number">4</div>
+            <div class="process-icon">
+              <i class="fas fa-hand-holding-usd"></i>
             </div>
+            <h3 class="process-title">Get Paid</h3>
+            <p class="process-text">
+              Accept our offer and get paid on the spot. We handle all the paperwork - you just walk away with cash in hand.
+            </p>
           </div>
         </div>
       </div>
@@ -651,96 +660,109 @@
     </div>
   </section>
 
+  </main>
+  <!-- End Main Content -->
+
   <!-- Footer -->
-  <footer class="footer bg-dark text-white">
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <!-- Footer Main Content -->
-      <div class="footer-main py-5">
-        <div class="row g-4">
-          <!-- Company Info -->
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-brand mb-4">
-              <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="50">
-            </div>
-            <p class="footer-description">
-              Zimbabwe's premier Subaru specialist. We provide quality engines, parts, and expert services for all Subaru models.
-            </p>
-            <p class="footer-tagline fst-italic">
-              "The Heart of Every Subaru"
-            </p>
-            <div class="footer-social mt-3">
-              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/263776381498" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru" height="36" class="mb-3">
           
-          <!-- Quick Links -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-title">Quick Links</h5>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="catalog.html">Parts Catalog</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="sell.html">Sell Your Subaru</a></li>
-            </ul>
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://wa.me/263776381498" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
-          
-          <!-- Services -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Our Services</h5>
-            <ul class="footer-links">
-              <li><a href="services.html?tab=engines">Engine Sales & Swaps</a></li>
-              <li><a href="services.html?tab=parts">Parts Department</a></li>
-              <li><a href="services.html?tab=breaking">Car Breaking</a></li>
-              <li><a href="services.html?tab=trading">Vehicle Trading</a></li>
-              <li><a href="services.html?tab=garage">Specialist Garage</a></li>
-              <li><a href="services.html?tab=diagnostics">Diagnostics</a></li>
-            </ul>
-          </div>
-          
-          <!-- Contact Info -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Contact Us</h5>
-            <ul class="footer-contact">
-              <li>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="catalog.html">Parts Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sell.html">Sell Your Subaru</a></li>
+          </ul>
+        </div>
+        
+        <!-- Popular Products -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Popular Products</h6>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=engines">EJ25 Engines</a></li>
+            <li><a href="catalog.html?cat=engines">EJ20 Turbo</a></li>
+            <li><a href="catalog.html?cat=turbo">Turbochargers</a></li>
+            <li><a href="catalog.html?cat=brakes">Brembo Brakes</a></li>
+            <li><a href="catalog.html?cat=suspension">Coilovers</a></li>
+            <li><a href="catalog.html?cat=body">Body Parts</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Our Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#engines">Engine Sales</a></li>
+            <li><a href="services.html#parts">Parts Department</a></li>
+            <li><a href="services.html#breaking">Car Breaking</a></li>
+            <li><a href="services.html#trading">Vehicle Trading</a></li>
+            <li><a href="services.html#garage">Specialist Garage</a></li>
+            <li><a href="services.html#diagnostics">Diagnostics</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h6 class="footer-heading">Contact Us</h6>
+          <ul class="footer-links footer-contact">
+            <li>
+              <a href="https://maps.google.com/?q=Number+9+Sherwood+Crescent+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" target="_blank" rel="noopener">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Number 9 Sherwood Crescent,<br>Waterfalls, Zindoga Shops,<br>Harare, Zimbabwe</span>
-              </li>
-              <li>
+                Sherwood Crescent, Waterfalls (Zindoga Shops), Harare
+              </a>
+            </li>
+            <li>
+              <a href="tel:+263776381498">
                 <i class="fas fa-phone"></i>
-                <a href="tel:+263776381498">+263 77 638 1498</a>
-              </li>
-              <li>
+                +263 77 638 1498
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sales@rushsubaru.com">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:sales@rushsubaru.com">sales@rushsubaru.com</a>
-              </li>
-              <li>
-                <i class="fas fa-clock"></i>
-                <span>Mon-Fri: 8AM-5PM<br>Sat: 8AM-1PM</span>
-              </li>
-            </ul>
-          </div>
+                sales@rushsubaru.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/263776381498" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp Us
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       
       <!-- Footer Bottom -->
-      <div class="footer-bottom py-3 border-top border-secondary">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0">
-              &copy; <span id="currentYear"></span> Zaza Rush Subaru. All rights reserved.
-            </p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <p class="mb-0 developer-credit">
-              Developed with <i class="fas fa-heart text-danger"></i> by 
-              <a href="https://bguvava.com" target="_blank" rel="noopener">bguvava</a>
-            </p>
-          </div>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; <span class="copyright-year">2026</span> Zaza Rush Subaru. All Rights Reserved.</p>
+        <p class="developer-credits">
+          Developed and Hosted with <span style="color: #DC3545;">❤️</span> by 
+          <a href="https://blaxium.com" target="_blank" rel="noopener">Blaxium Hub</a>
+        </p>
       </div>
     </div>
   </footer>
@@ -750,10 +772,11 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- WhatsApp Float Button -->
+  <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20Zaza%20Rush%20Subaru%20services." 
-     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
+    <span class="tooltip">Chat with us!</span>
   </a>
 
   <!-- JavaScript Libraries -->

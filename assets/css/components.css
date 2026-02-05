@@ -14,10 +14,11 @@
   top: 0;
   left: 0;
   width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-  z-index: var(--z-index-toast);
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  z-index: 9999;
   transition: width 50ms linear;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
 }
 
 /* ---------------------------------------------
@@ -151,21 +152,22 @@
 .navbar {
   background-color: var(--color-primary);
   box-shadow: none;
-  padding: var(--spacing-sm) 0;
+  padding: 0.4rem 0;
   transition: all var(--transition-normal);
 }
 
 .navbar-brand img {
-  height: 50px;
+  height: 40px;
   width: auto;
-  max-width: 280px;
+  max-width: 180px;
 }
 
 .navbar-nav .nav-link {
   font-family: var(--font-heading);
   font-weight: var(--font-weight-medium);
+  font-size: 0.875rem;
   color: var(--color-white);
-  padding: var(--spacing-sm) var(--spacing-md) !important;
+  padding: 0.4rem 0.75rem !important;
   transition: all var(--transition-fast);
   position: relative;
 }
@@ -177,18 +179,11 @@
 /* Active state indicator - CORE-014 */
 .navbar-nav .nav-link.active {
   font-weight: var(--font-weight-semibold);
-  color: var(--color-white);
+  color: var(--color-white) !important;
 }
 
 .navbar-nav .nav-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: var(--spacing-md);
-  right: var(--spacing-md);
-  height: 2px;
-  background-color: var(--color-secondary);
-  border-radius: var(--border-radius-sm);
+  display: none;
 }
 
 /* Mobile Navigation Toggle - CORE-013 */
@@ -219,8 +214,10 @@
 .navbar-nav .nav-link.btn {
   background-color: var(--color-white);
   color: var(--color-primary);
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-sm) var(--spacing-lg) !important;
+  border-radius: var(--border-radius-sm);
+  padding: 0.35rem 0.9rem !important;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
 }
 
 .navbar-nav .nav-link.btn:hover {
@@ -238,14 +235,25 @@
 .footer {
   background-color: var(--color-dark-gray);
   color: var(--color-white);
-  padding: var(--spacing-3xl) 0 var(--spacing-lg);
+  padding: var(--spacing-2xl) 0 var(--spacing-md);
+  font-size: 0.875rem;
 }
 
-.footer h5 {
-  color: var(--color-white);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--spacing-lg);
-  font-size: var(--font-size-lg);
+.footer-heading {
+  color: #FFFFFF !important;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-md);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.footer h5,
+.footer h6 {
+  color: #FFFFFF !important;
 }
 
 /* CORE-016: Company slogan styling */
@@ -253,17 +261,20 @@
   color: var(--color-light-blue);
   font-style: italic;
   font-weight: var(--font-weight-medium);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.85rem;
 }
 
 .footer p {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--spacing-sm);
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.5;
 }
 
 .footer a {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.75);
   transition: color var(--transition-fast);
+  font-size: 0.85rem;
 }
 
 /* CORE-017: Footer links with hover effect */
@@ -279,43 +290,44 @@
 }
 
 .footer-links li {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.4rem;
 }
 
 .footer-links a {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-xs);
 }
 
 /* CORE-018: Contact info icons */
 .footer-contact a i {
-  width: 20px;
+  width: 16px;
   color: var(--color-secondary);
   flex-shrink: 0;
+  font-size: 0.8rem;
 }
 
 /* CORE-019: Social Links with hover animations */
 .social-links {
   display: flex;
-  gap: var(--spacing-md);
-  margin-top: var(--spacing-lg);
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
 }
 
 .social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius-full);
   transition: all var(--transition-fast);
-  font-size: var(--font-size-lg);
+  font-size: 0.9rem;
 }
 
 .social-links a:hover {
-  transform: scale(1.1) translateY(-3px);
+  transform: scale(1.1) translateY(-2px);
 }
 
 /* Social brand colors on hover */
@@ -334,19 +346,24 @@
 /* CORE-020: Footer Bottom with credits */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: var(--spacing-lg);
-  margin-top: var(--spacing-2xl);
-  text-align: center;
+  padding-top: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-bottom p {
-  margin-bottom: var(--spacing-xs);
-  font-size: var(--font-size-sm);
+  margin-bottom: 0;
+  font-size: 0.8rem;
 }
 
 .developer-credits {
-  font-size: var(--font-size-sm);
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0;
 }
 
 .developer-credits a {

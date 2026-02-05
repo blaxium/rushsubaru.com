@@ -27,7 +27,8 @@ const RushCatalog = (() => {
     STORAGE_KEYS: {
       VIEW_PREFERENCE: 'catalogViewPreference'
     },
-    PLACEHOLDER_IMAGE: 'assets/images/catalog/placeholder.jpg'
+    PLACEHOLDER_IMAGE: 'assets/images/catalog/placeholder.jpg',
+    IMAGE_BASE_PATH: 'assets/images/catalog/'
   };
 
   // State
@@ -115,8 +116,6 @@ const RushCatalog = (() => {
     elements.conditionFilters = document.getElementById('conditionFilters');
     elements.yearFrom = document.getElementById('yearFrom');
     elements.yearTo = document.getElementById('yearTo');
-    elements.priceMin = document.getElementById('priceMin');
-    elements.priceMax = document.getElementById('priceMax');
     elements.inStockOnly = document.getElementById('inStockOnly');
     elements.totalProducts = document.getElementById('totalProducts');
     elements.inStockCount = document.getElementById('inStockCount');
@@ -187,16 +186,10 @@ const RushCatalog = (() => {
       elements.yearTo.addEventListener('change', handleFilterChange);
     }
     
-    // Price filters - CAT-012
-    if (elements.priceMin) {
-      elements.priceMin.addEventListener('input', debounce(handleFilterChange, CONFIG.DEBOUNCE_DELAY));
-    }
-    
-    if (elements.priceMax) {
-      elements.priceMax.addEventListener('input', debounce(handleFilterChange, CONFIG.DEBOUNCE_DELAY));
-    }
-    
     // In stock only
+    if (elements.inStockOnly) {
+      elements.inStockOnly.addEventListener('change', handleFilterChange);
+    }
     if (elements.inStockOnly) {
       elements.inStockOnly.addEventListener('change', handleFilterChange);
     }
@@ -319,15 +312,6 @@ const RushCatalog = (() => {
       filtered = filtered.filter(p => state.filters.conditions.includes(p.condition));
     }
     
-    // Filter by price range - CAT-012
-    if (state.filters.priceMin) {
-      filtered = filtered.filter(p => p.price && p.price >= parseInt(state.filters.priceMin));
-    }
-    
-    if (state.filters.priceMax) {
-      filtered = filtered.filter(p => p.price && p.price <= parseInt(state.filters.priceMax));
-    }
-    
     // Filter in stock only
     if (state.filters.inStockOnly) {
       filtered = filtered.filter(p => p.inStock);
@@ -410,17 +394,14 @@ const RushCatalog = (() => {
    * Create a product card HTML - CAT-019 to CAT-024
    */
   function createProductCard(product) {
-    const priceDisplay = product.price 
-      ? `USD$ ${product.price.toLocaleString()}` 
-      : 'Contact for Price';
-    
-    const priceClass = product.price ? '' : 'contact-price';
+    const priceDisplay = 'Contact for Quote';
+    const priceClass = 'contact-price';
     const outOfStockClass = !product.inStock ? 'out-of-stock' : '';
     const conditionClass = `badge-${product.condition}`;
     const title = highlightSearchTerm(product.title);
     const modelsText = product.models.slice(0, 3).join(', ') + (product.models.length > 3 ? '...' : '');
     const imageUrl = product.images && product.images.length > 0 
-      ? `assets/images/catalog/${product.images[0]}`
+      ? `${CONFIG.IMAGE_BASE_PATH}${product.images[0]}`
       : CONFIG.PLACEHOLDER_IMAGE;
     
     return `
@@ -463,16 +444,13 @@ const RushCatalog = (() => {
    * Create a product list item HTML - CAT-017
    */
   function createProductListItem(product) {
-    const priceDisplay = product.price 
-      ? `USD$ ${product.price.toLocaleString()}` 
-      : 'Contact for Price';
-    
-    const priceClass = product.price ? '' : 'contact-price';
+    const priceDisplay = 'Contact for Quote';
+    const priceClass = 'contact-price';
     const outOfStockClass = !product.inStock ? 'out-of-stock' : '';
     const conditionClass = `badge-${product.condition}`;
     const title = highlightSearchTerm(product.title);
     const imageUrl = product.images && product.images.length > 0 
-      ? `assets/images/catalog/${product.images[0]}`
+      ? `${CONFIG.IMAGE_BASE_PATH}${product.images[0]}`
       : CONFIG.PLACEHOLDER_IMAGE;
     
     return `
@@ -630,10 +608,6 @@ const RushCatalog = (() => {
     if (elements.yearFrom) state.filters.yearFrom = elements.yearFrom.value;
     if (elements.yearTo) state.filters.yearTo = elements.yearTo.value;
     
-    // Price range
-    if (elements.priceMin) state.filters.priceMin = elements.priceMin.value;
-    if (elements.priceMax) state.filters.priceMax = elements.priceMax.value;
-    
     // In stock only
     if (elements.inStockOnly) state.filters.inStockOnly = elements.inStockOnly.checked;
     
@@ -650,8 +624,6 @@ const RushCatalog = (() => {
       yearFrom: '',
       yearTo: '',
       conditions: [],
-      priceMin: '',
-      priceMax: '',
       inStockOnly: false
     };
     state.searchTerm = '';
@@ -674,8 +646,6 @@ const RushCatalog = (() => {
     
     if (elements.yearFrom) elements.yearFrom.value = '';
     if (elements.yearTo) elements.yearTo.value = '';
-    if (elements.priceMin) elements.priceMin.value = '';
-    if (elements.priceMax) elements.priceMax.value = '';
     if (elements.inStockOnly) elements.inStockOnly.checked = false;
     
     applyFilters();
@@ -950,16 +920,14 @@ const RushCatalog = (() => {
     
     // Populate modal
     const imageUrl = product.images && product.images.length > 0 
-      ? `assets/images/catalog/${product.images[0]}`
+      ? `${CONFIG.IMAGE_BASE_PATH}${product.images[0]}`
       : CONFIG.PLACEHOLDER_IMAGE;
     
     if (elements.quoteProductImage) elements.quoteProductImage.src = imageUrl;
     if (elements.quoteProductTitle) elements.quoteProductTitle.textContent = product.title;
     if (elements.quoteProductSku) elements.quoteProductSku.textContent = product.sku;
     if (elements.quoteProductPrice) {
-      elements.quoteProductPrice.textContent = product.price 
-        ? `USD$ ${product.price.toLocaleString()}` 
-        : 'Contact for Price';
+      elements.quoteProductPrice.textContent = 'Contact for Quote';
     }
     if (elements.quoteProductId) elements.quoteProductId.value = productId;
     
@@ -1050,12 +1018,9 @@ const RushCatalog = (() => {
     const quantity = quantityInput ? quantityInput.value : 1;
     const notes = notesInput ? notesInput.value : '';
     
-    const priceText = product.price ? `USD$ ${product.price.toLocaleString()}` : 'price not listed';
-    
     let message = `Hi, I'd like to request a quote for:\n\n`;
     message += `Product: ${product.title}\n`;
     message += `SKU: ${product.sku}\n`;
-    message += `Listed Price: ${priceText}\n`;
     message += `Quantity: ${quantity}\n`;
     message += `Name: ${name}\n`;
     
@@ -1086,7 +1051,7 @@ const RushCatalog = (() => {
     const imagesHtml = product.images && product.images.length > 0
       ? product.images.map((img, index) => `
           <div class="carousel-item ${index === 0 ? 'active' : ''}">
-            <img src="assets/images/catalog/${img}" class="d-block w-100" alt="${product.title}"
+            <img src="${CONFIG.IMAGE_BASE_PATH}${img}" class="d-block w-100" alt="${product.title}"
                  onerror="this.src='${CONFIG.PLACEHOLDER_IMAGE}'">
           </div>
         `).join('')
@@ -1098,9 +1063,7 @@ const RushCatalog = (() => {
     if (elements.quickViewTitle) elements.quickViewTitle.textContent = product.title;
     if (elements.quickViewDescription) elements.quickViewDescription.textContent = product.description;
     if (elements.quickViewPrice) {
-      elements.quickViewPrice.textContent = product.price 
-        ? `USD$ ${product.price.toLocaleString()}` 
-        : 'Contact for Price';
+      elements.quickViewPrice.textContent = 'Contact for Quote';
     }
     
     // Store product for actions
@@ -1109,9 +1072,8 @@ const RushCatalog = (() => {
     // Setup action buttons
     if (elements.quickViewWhatsApp) {
       elements.quickViewWhatsApp.onclick = () => {
-        const priceText = product.price ? `USD$ ${product.price.toLocaleString()}` : 'price not listed';
         const message = encodeURIComponent(
-          `Hi, I'm interested in ${product.title} (SKU: ${product.sku}) listed at ${priceText}. Please provide more details.`
+          `Hi, I'm interested in ${product.title} (SKU: ${product.sku}). Please provide pricing and more details.`
         );
         window.open(`https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${message}`, '_blank');
       };
@@ -1342,3 +1304,4 @@ const RushCatalog = (() => {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', RushCatalog.init);
+

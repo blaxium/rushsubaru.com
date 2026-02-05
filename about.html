@@ -13,14 +13,14 @@
   
   <!-- SEO Meta Tags -->
   <title>About Us - Zaza Rush Subaru | Zimbabwe's Subaru Specialist</title>
-  <meta name="description" content="Learn about Zaza Rush Subaru - Zimbabwe's premier Subaru specialist. Discover our passion for Boxer engines, AWD expertise, and commitment to quality service.">
+  <meta name="description" content="Learn about Zaza Rush Subaru - Zimbabwe's leading Subaru specialist. Discover our passion for Boxer engines, AWD expertise, and commitment to quality service.">
   <meta name="keywords" content="Subaru specialist Zimbabwe, Subaru Harare, Boxer engine experts, AWD service, Subaru parts Zimbabwe">
   <meta name="author" content="bguvava">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:title" content="About Us - Zaza Rush Subaru">
-  <meta property="og:description" content="Zimbabwe's premier Subaru specialist. Expert Boxer engine and AWD service.">
+  <meta property="og:description" content="Zimbabwe's leading Subaru specialist. Expert Boxer engine and AWD service.">
   <meta property="og:image" content="assets/images/og-about.jpg">
   <meta property="og:url" content="https://www.rushsubaru.com/about.html">
   <meta property="og:type" content="website">
@@ -53,20 +53,26 @@
 </head>
 <body>
   <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
+      <!-- Logo -->
       <a class="navbar-brand" href="index.html">
-        <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="45" class="logo-white">
-        <img src="assets/images/logo/logo-dark.png" alt="Zaza Rush Subaru" height="45" class="logo-dark d-none">
+        <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru Logo" height="50">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <span class="visually-hidden">Menu</span>
       </button>
+      
+      <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -77,54 +83,50 @@
             <a class="nav-link" href="catalog.html">Parts Catalog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="about.html">About Us</a>
+            <a class="nav-link active" href="about.html" aria-current="page">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-cta" href="sell.html">Sell Your Subaru</a>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn" href="sell.html">Sell Your Subaru</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Header / Hero Section - ABT-001, ABT-002 -->
-  <header class="about-hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="row align-items-center min-vh-60">
-        <div class="col-lg-8" data-aos="fade-up">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">About Us</li>
-            </ol>
-          </nav>
-          <h1 class="hero-title">The Heart of Every Subaru</h1>
-          <p class="hero-subtitle">
-            Zimbabwe's premier Subaru specialist, born from a passion for boxer engines 
-            and a commitment to keeping every Subaru performing at its peak.
-          </p>
-          <div class="hero-stats">
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-              <span class="stat-number">500+</span>
-              <span class="stat-label">Engines Rebuilt</span>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-              <span class="stat-number">1000+</span>
-              <span class="stat-label">Happy Customers</span>
-            </div>
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- ============================================
+         PAGE HEADER
+    ============================================ -->
+    <section class="page-header py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8" data-aos="fade-right">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+              </ol>
+            </nav>
+            <h1 class="page-title display-4 fw-bold text-white mb-3">The Heart of Every Subaru</h1>
+            <p class="page-subtitle lead text-white-75">
+              Zimbabwe's leading Subaru specialist, born from a passion for boxer engines 
+              and a commitment to keeping every Subaru performing at its peak.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
+            <a href="https://wa.me/263776381498?text=Hello!%20I'd%20like%20to%20learn%20more%20about%20Zaza%20Rush%20Subaru." 
+               class="btn btn-light btn-lg" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp me-2"></i>Quick Inquiry
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
   <!-- Company Story Section - ABT-001, ABT-002, ABT-003 -->
   <section class="company-story py-5">
@@ -132,11 +134,10 @@
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
           <div class="story-image-wrapper">
-            <img src="assets/images/about/workshop-main.jpg" 
+            <img src="assets/images/hero/enginee.webp" 
                  alt="Zaza Rush Subaru Workshop" 
                  class="img-fluid rounded-4 shadow-lg"
-                 loading="lazy"
-                 onerror="this.src='assets/images/placeholder-workshop.jpg'">
+                 loading="lazy">
             <div class="experience-badge">
               <span class="years">10+</span>
               <span class="text">Years of<br>Excellence</span>
@@ -157,7 +158,7 @@
             precision machines like any other vehicle.
           </p>
           <p>
-            Today, from our workshop at Sherwood Crescent in Waterfalls, we serve Subaru 
+            Today, from our workshop at Sherwood Crescent in Waterfalls (Zindoga Shops), we serve Subaru 
             enthusiasts across Zimbabwe and beyond, providing everything from routine 
             maintenance to complete engine rebuilds and performance upgrades.
           </p>
@@ -429,13 +430,14 @@
       </div>
       
       <div class="row g-3">
+        <!-- Large Left Image -->
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <a href="assets/images/gallery/workshop-1.jpg" data-lightbox="workshop" data-title="Main Workshop Area">
+          <a href="assets/images/products/complete1.jpeg" data-lightbox="workshop" data-title="Main Workshop Area">
             <div class="gallery-item large">
-              <img src="assets/images/gallery/workshop-1.jpg" 
+              <img src="assets/images/products/complete1.jpeg" 
                    alt="Zaza Rush Subaru Main Workshop"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
+                   class="img-fluid rounded shadow"
+                   loading="lazy">
               <div class="gallery-overlay">
                 <i class="fas fa-expand"></i>
                 <span>Main Workshop</span>
@@ -443,13 +445,91 @@
             </div>
           </a>
         </div>
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-          <a href="assets/images/gallery/workshop-2.jpg" data-lightbox="workshop" data-title="Diagnostic Equipment">
+        
+        <!-- Right Column - 2 rows of 2 images -->
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6" data-aos="fade-up" data-aos-delay="200">
+              <a href="assets/images/products/complete2.jpeg" data-lightbox="workshop" data-title="Engine Bay Work">
+                <div class="gallery-item">
+                  <img src="assets/images/products/complete2.jpeg" 
+                       alt="Engine Bay Work"
+                       class="img-fluid rounded shadow"
+                       loading="lazy">
+                  <div class="gallery-overlay">
+                    <i class="fas fa-expand"></i>
+                    <span>Engine Work</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6" data-aos="fade-up" data-aos-delay="300">
+              <a href="assets/images/products/complete3.jpeg" data-lightbox="workshop" data-title="Parts Department">
+                <div class="gallery-item">
+                  <img src="assets/images/products/complete3.jpeg" 
+                       alt="Parts Department"
+                       class="img-fluid rounded shadow"
+                       loading="lazy">
+                  <div class="gallery-overlay">
+                    <i class="fas fa-expand"></i>
+                    <span>Parts Dept</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6" data-aos="fade-up" data-aos-delay="400">
+              <a href="assets/images/products/DSC_1857_grande.webp" data-lightbox="workshop" data-title="Workshop Equipment">
+                <div class="gallery-item">
+                  <img src="assets/images/products/DSC_1857_grande.webp" 
+                       alt="Workshop Equipment"
+                       class="img-fluid rounded shadow"
+                       loading="lazy">
+                  <div class="gallery-overlay">
+                    <i class="fas fa-expand"></i>
+                    <span>Equipment</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6" data-aos="fade-up" data-aos-delay="500">
+              <a href="assets/images/products/DSC_1858_grande.webp" data-lightbox="workshop" data-title="Engine Parts">
+                <div class="gallery-item">
+                  <img src="assets/images/products/DSC_1858_grande.webp" 
+                       alt="Engine Parts"
+                       class="img-fluid rounded shadow"
+                       loading="lazy">
+                  <div class="gallery-overlay">
+                    <i class="fas fa-expand"></i>
+                    <span>Engine Parts</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Bottom Row - 4 Equal Images -->
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+          <a href="assets/images/products/DSC_1859_grande.webp" data-lightbox="workshop" data-title="Turbo Components">
             <div class="gallery-item">
-              <img src="assets/images/gallery/workshop-2.jpg" 
-                   alt="Diagnostic Equipment"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
+              <img src="assets/images/products/DSC_1859_grande.webp" 
+                   alt="Turbo Components"
+                   class="img-fluid rounded shadow"
+                   loading="lazy">
+              <div class="gallery-overlay">
+                <i class="fas fa-expand"></i>
+                <span>Turbos</span>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+          <a href="assets/images/products/DSC_1860_grande.webp" data-lightbox="workshop" data-title="Diagnostic Tools">
+            <div class="gallery-item">
+              <img src="assets/images/products/DSC_1860_grande.webp" 
+                   alt="Diagnostic Tools"
+                   class="img-fluid rounded shadow"
+                   loading="lazy">
               <div class="gallery-overlay">
                 <i class="fas fa-expand"></i>
                 <span>Diagnostics</span>
@@ -457,58 +537,30 @@
             </div>
           </a>
         </div>
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-          <a href="assets/images/gallery/workshop-3.jpg" data-lightbox="workshop" data-title="Engine Bay">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+          <a href="assets/images/products/DSC_1861_grande.webp" data-lightbox="workshop" data-title="Service Bay">
             <div class="gallery-item">
-              <img src="assets/images/gallery/workshop-3.jpg" 
-                   alt="Engine Service Bay"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
+              <img src="assets/images/products/DSC_1861_grande.webp" 
+                   alt="Service Bay"
+                   class="img-fluid rounded shadow"
+                   loading="lazy">
               <div class="gallery-overlay">
                 <i class="fas fa-expand"></i>
-                <span>Engine Bay</span>
+                <span>Service Bay</span>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-          <a href="assets/images/gallery/workshop-4.jpg" data-lightbox="workshop" data-title="Parts Department">
+        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+          <a href="assets/images/products/DSC_1862_grande.webp" data-lightbox="workshop" data-title="Quality Control">
             <div class="gallery-item">
-              <img src="assets/images/gallery/workshop-4.jpg" 
-                   alt="Parts Storage"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
+              <img src="assets/images/products/DSC_1862_grande.webp" 
+                   alt="Quality Control"
+                   class="img-fluid rounded shadow"
+                   loading="lazy">
               <div class="gallery-overlay">
                 <i class="fas fa-expand"></i>
-                <span>Parts Dept</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
-          <a href="assets/images/gallery/workshop-5.jpg" data-lightbox="workshop" data-title="Specialized Tools">
-            <div class="gallery-item">
-              <img src="assets/images/gallery/workshop-5.jpg" 
-                   alt="Specialized Subaru Tools"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
-              <div class="gallery-overlay">
-                <i class="fas fa-expand"></i>
-                <span>Tools</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-          <a href="assets/images/gallery/workshop-6.jpg" data-lightbox="workshop" data-title="Customer Reception">
-            <div class="gallery-item large">
-              <img src="assets/images/gallery/workshop-6.jpg" 
-                   alt="Customer Reception Area"
-                   loading="lazy"
-                   onerror="this.src='assets/images/placeholder-gallery.jpg'">
-              <div class="gallery-overlay">
-                <i class="fas fa-expand"></i>
-                <span>Reception</span>
+                <span>Quality Check</span>
               </div>
             </div>
           </a>
@@ -544,83 +596,105 @@
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-main py-5">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Company Info -->
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-brand mb-4">
-              <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="50">
-            </div>
-            <p class="footer-about">
-              Zimbabwe's premier Subaru specialist. Quality parts, expert service, 
-              and genuine passion for the Subaru brand.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/263776381498" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru" height="36" class="mb-3">
           
-          <!-- Quick Links -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-title">Quick Links</h5>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="catalog.html">Parts Catalog</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://wa.me/263776381498" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
-          
-          <!-- Services -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Our Services</h5>
-            <ul class="footer-links">
-              <li><a href="services.html#engines">Engine Sales</a></li>
-              <li><a href="services.html#parts">Parts Department</a></li>
-              <li><a href="services.html#breaking">Car Breaking</a></li>
-              <li><a href="services.html#trading">Vehicle Trading</a></li>
-              <li><a href="services.html#garage">Specialist Garage</a></li>
-            </ul>
-          </div>
-          
-          <!-- Contact Info -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Contact Us</h5>
-            <ul class="footer-contact">
-              <li>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="catalog.html">Parts Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sell.html">Sell Your Subaru</a></li>
+          </ul>
+        </div>
+        
+        <!-- Popular Products -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Popular Products</h6>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=engines">EJ25 Engines</a></li>
+            <li><a href="catalog.html?cat=engines">EJ20 Turbo</a></li>
+            <li><a href="catalog.html?cat=turbo">Turbochargers</a></li>
+            <li><a href="catalog.html?cat=brakes">Brembo Brakes</a></li>
+            <li><a href="catalog.html?cat=suspension">Coilovers</a></li>
+            <li><a href="catalog.html?cat=body">Body Parts</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Our Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#engines">Engine Sales</a></li>
+            <li><a href="services.html#parts">Parts Department</a></li>
+            <li><a href="services.html#breaking">Car Breaking</a></li>
+            <li><a href="services.html#trading">Vehicle Trading</a></li>
+            <li><a href="services.html#garage">Specialist Garage</a></li>
+            <li><a href="services.html#diagnostics">Diagnostics</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h6 class="footer-heading">Contact Us</h6>
+          <ul class="footer-links footer-contact">
+            <li>
+              <a href="https://maps.google.com/?q=Number+9+Sherwood+Crescent+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" target="_blank" rel="noopener">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Number 9 Sherwood Crescent,<br>Waterfalls, Zindoga Shops,<br>Harare, Zimbabwe</span>
-              </li>
-              <li>
+                Sherwood Crescent, Waterfalls (Zindoga Shops), Harare
+              </a>
+            </li>
+            <li>
+              <a href="tel:+263776381498">
                 <i class="fas fa-phone"></i>
-                <a href="tel:+263776381498">+263 77 638 1498</a>
-              </li>
-              <li>
+                +263 77 638 1498
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sales@rushsubaru.com">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:sales@rushsubaru.com">sales@rushsubaru.com</a>
-              </li>
-            </ul>
-          </div>
+                sales@rushsubaru.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/263776381498" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp Us
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    
-    <!-- Footer Bottom -->
-    <div class="footer-bottom py-3">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0">&copy; <span id="currentYear"></span> Zaza Rush Subaru. All Rights Reserved.</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <p class="mb-0 developer-credit">Developed with <i class="fas fa-heart text-danger"></i> by <a href="https://bguvava.com" target="_blank" rel="noopener">bguvava</a></p>
-          </div>
-        </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; <span class="copyright-year">2026</span> Zaza Rush Subaru. All Rights Reserved.</p>
+        <p class="developer-credits">
+          Developed and Hosted with <span style="color: #DC3545;">❤️</span> by 
+          <a href="https://blaxium.com" target="_blank" rel="noopener">Blaxium Hub</a>
+        </p>
       </div>
     </div>
   </footer>
@@ -630,13 +704,11 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/263776381498?text=Hello%20Zaza%20Rush%20Subaru!%20I'm%20interested%20in%20your%20services." 
-     class="whatsapp-float" 
-     target="_blank" 
-     aria-label="Contact us on WhatsApp">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20Zaza%20Rush%20Subaru%20services." 
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">Chat with us!</span>
+    <span class="tooltip">Chat with us!</span>
   </a>
 
   <!-- JavaScript Libraries -->

@@ -1,594 +1,780 @@
 {
-  "products": [
-    {
-      "id": "ENG-001",
-      "sku": "EJ257-2019-LOW",
-      "title": "EJ257 2.5L Turbo Engine - Low Mileage",
-      "description": "Complete EJ257 engine from 2019 WRX STI. 45,000km. Includes turbo, manifolds, and harness. Compression tested and verified.",
-      "category": "engines",
-      "price": 4500,
-      "condition": "used",
-      "models": ["WRX STI", "Forester XT"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["ej257-1.jpg", "ej257-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-15"
-    },
-    {
-      "id": "ENG-002",
-      "sku": "EJ205-TURBO-COMP",
-      "title": "EJ205 2.0L Turbo Engine Complete",
-      "description": "Complete EJ205 turbo engine from 2005 Impreza WRX. 78,000km. Includes TD04 turbo, intercooler piping, and ECU.",
-      "category": "engines",
-      "price": 2800,
-      "condition": "used",
-      "models": ["Impreza WRX", "Forester XT"],
-      "yearFrom": 2002,
-      "yearTo": 2007,
-      "images": ["ej205-1.jpg", "ej205-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-10"
-    },
-    {
-      "id": "ENG-003",
-      "sku": "EJ25-NA-SOHC",
-      "title": "EJ25 2.5L SOHC NA Engine",
-      "description": "Non-turbo EJ25 SOHC engine. 95,000km. Perfect for Outback or Legacy replacement. All accessories included.",
-      "category": "engines",
-      "price": 1500,
-      "condition": "used",
-      "models": ["Legacy", "Outback", "Forester"],
-      "yearFrom": 2005,
-      "yearTo": 2012,
-      "images": ["ej25-na-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-08"
-    },
-    {
-      "id": "ENG-004",
-      "sku": "FA20-DIT-NEW",
-      "title": "FA20 DIT 2.0L Turbo - Brand New",
-      "description": "Brand new FA20 DIT turbocharged engine. Factory sealed with full Subaru warranty. For 2015+ WRX applications.",
-      "category": "engines",
-      "price": 8500,
-      "condition": "new",
-      "models": ["WRX", "Levorg"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["fa20-dit-1.jpg", "fa20-dit-2.jpg", "fa20-dit-3.jpg"],
-      "inStock": false,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "ENG-005",
-      "sku": "EZ30-FLAT6-COMP",
-      "title": "EZ30 3.0L Flat-6 Engine",
-      "description": "Complete EZ30 flat-six engine from 2008 Legacy. 68,000km. Rare H6 powerplant in excellent condition.",
-      "category": "engines",
-      "price": 3500,
-      "condition": "used",
-      "models": ["Legacy", "Outback", "Tribeca"],
-      "yearFrom": 2003,
-      "yearTo": 2009,
-      "images": ["ez30-1.jpg", "ez30-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-12"
-    },
-    {
-      "id": "ENG-006",
-      "sku": "EJ207-V7-STI",
-      "title": "EJ207 2.0L STI Engine - Version 7",
-      "description": "Legendary EJ207 Version 7 STI engine. Twin-scroll turbo setup. 62,000km. JDM import with documentation.",
-      "category": "engines",
-      "price": 5200,
-      "condition": "used",
-      "models": ["WRX STI", "Impreza"],
-      "yearFrom": 2001,
-      "yearTo": 2007,
-      "images": ["ej207-v7-1.jpg", "ej207-v7-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-18"
-    },
-    {
-      "id": "ENG-007",
-      "sku": "FB25-REBUILT",
-      "title": "FB25 2.5L Engine - Rebuilt",
-      "description": "Professionally rebuilt FB25 engine with new gaskets, timing chain, and water pump. 6-month warranty included.",
-      "category": "engines",
-      "price": 3200,
-      "condition": "rebuilt",
-      "models": ["Forester", "Outback", "XV"],
-      "yearFrom": 2011,
-      "yearTo": 2018,
-      "images": ["fb25-rebuilt-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-22"
-    },
-    {
-      "id": "PRT-001",
-      "sku": "TD04-TURBO-WRX",
-      "title": "TD04 Turbocharger - WRX",
-      "description": "OEM TD04 turbocharger for Subaru WRX. Fully rebuilt with new CHRA. Balanced and tested.",
-      "category": "parts",
-      "price": 650,
-      "condition": "rebuilt",
-      "models": ["Impreza WRX", "Forester XT"],
-      "yearFrom": 2002,
-      "yearTo": 2007,
-      "images": ["td04-turbo-1.jpg", "td04-turbo-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-14"
-    },
-    {
-      "id": "PRT-002",
-      "sku": "VF48-TURBO-STI",
-      "title": "VF48 Turbocharger - STI",
-      "description": "Genuine IHI VF48 turbo from WRX STI. Low miles, excellent condition. Direct bolt-on for 2004-2007 STI.",
-      "category": "parts",
-      "price": 850,
-      "condition": "used",
-      "models": ["WRX STI"],
-      "yearFrom": 2004,
-      "yearTo": 2007,
-      "images": ["vf48-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-16"
-    },
-    {
-      "id": "PRT-003",
-      "sku": "HEADGASKET-EJ25",
-      "title": "Head Gasket Set - EJ25 MLS",
-      "description": "Multi-layer steel head gasket set for EJ25 engines. Includes all necessary gaskets and seals for complete head job.",
-      "category": "parts",
-      "price": 180,
-      "condition": "new",
-      "models": ["Impreza", "Legacy", "Forester", "Outback"],
-      "yearFrom": 1999,
-      "yearTo": 2012,
-      "images": ["headgasket-ej25-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-05"
-    },
-    {
-      "id": "PRT-004",
-      "sku": "TIMING-KIT-EJ",
-      "title": "Complete Timing Belt Kit - EJ Series",
-      "description": "Premium timing belt kit. Includes belt, tensioner, idlers, water pump, and thermostat. Gates/Continental brands.",
-      "category": "parts",
-      "price": 320,
-      "condition": "new",
-      "models": ["Impreza", "WRX", "Legacy", "Forester", "Outback"],
-      "yearFrom": 1999,
-      "yearTo": 2012,
-      "images": ["timing-kit-1.jpg", "timing-kit-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-03"
-    },
-    {
-      "id": "PRT-005",
-      "sku": "CLUTCH-KIT-STI",
-      "title": "Performance Clutch Kit - STI",
-      "description": "Exedy Stage 1 organic clutch kit for WRX STI. Handles 400+ lb-ft torque. Includes pressure plate, disc, and bearing.",
-      "category": "parts",
-      "price": 550,
-      "condition": "new",
-      "models": ["WRX STI"],
-      "yearFrom": 2004,
-      "yearTo": 2021,
-      "images": ["clutch-sti-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-19"
-    },
-    {
-      "id": "PRT-006",
-      "sku": "INTERCOOLER-TMIC",
-      "title": "Top Mount Intercooler - WRX/STI",
-      "description": "OEM top mount intercooler from 2008 WRX STI. Upgraded Y-pipe included. No leaks or damage.",
-      "category": "parts",
-      "price": 280,
-      "condition": "used",
-      "models": ["Impreza WRX", "WRX STI"],
-      "yearFrom": 2004,
-      "yearTo": 2014,
-      "images": ["tmic-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-11"
-    },
-    {
-      "id": "PRT-007",
-      "sku": "AXLEBACK-STI",
-      "title": "Axle-Back Exhaust - STI",
-      "description": "Genuine STI axle-back exhaust. Quad tips, deep tone. Direct fit for 2015+ WRX/STI sedan.",
-      "category": "parts",
-      "price": 450,
-      "condition": "used",
-      "models": ["WRX", "WRX STI"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["axleback-sti-1.jpg", "axleback-sti-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-17"
-    },
-    {
-      "id": "PRT-008",
-      "sku": "COILOVERS-BC",
-      "title": "BC Racing Coilovers - GD Impreza",
-      "description": "BC Racing BR series coilovers for 2002-2007 Impreza/WRX. 30-way adjustable. 8K/6K spring rates.",
-      "category": "parts",
-      "price": 950,
-      "condition": "used",
-      "models": ["Impreza", "Impreza WRX", "WRX STI"],
-      "yearFrom": 2002,
-      "yearTo": 2007,
-      "images": ["coilovers-bc-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-13"
-    },
-    {
-      "id": "PRT-009",
-      "sku": "RADIATOR-WRX",
-      "title": "Aluminum Radiator - WRX/STI",
-      "description": "Mishimoto aluminum radiator. 40% increased capacity over stock. Includes cap and drain plug.",
-      "category": "parts",
-      "price": 380,
-      "condition": "new",
-      "models": ["Impreza WRX", "WRX STI"],
-      "yearFrom": 2008,
-      "yearTo": 2014,
-      "images": ["radiator-mishi-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-21"
-    },
-    {
-      "id": "PRT-010",
-      "sku": "SHORTBLOCK-EJ257",
-      "title": "EJ257 Short Block - Closed Deck",
-      "description": "IAG Stage 2.5 closed deck EJ257 short block. 1000+ HP capable. Brand new with documentation.",
-      "category": "parts",
-      "price": 4800,
-      "condition": "new",
-      "models": ["WRX STI", "Forester XT"],
-      "yearFrom": 2004,
-      "yearTo": 2021,
-      "images": ["shortblock-iag-1.jpg", "shortblock-iag-2.jpg"],
-      "inStock": false,
-      "dateAdded": "2026-01-25"
-    },
-    {
-      "id": "PRT-011",
-      "sku": "HEADERS-EL-FA20",
-      "title": "Equal Length Headers - FA20",
-      "description": "Tomei equal length headers for FA20 WRX. Stainless steel. Removes unequal rumble, adds 15-20 HP.",
-      "category": "parts",
-      "price": 890,
-      "condition": "new",
-      "models": ["WRX"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["headers-tomei-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-23"
-    },
-    {
-      "id": "PRT-012",
-      "sku": "ECU-STOCK-GD",
-      "title": "ECU - Stock GD Impreza WRX",
-      "description": "OEM ECU from 2005 Impreza WRX. Unmodified, ready for tune. Manual transmission model.",
-      "category": "parts",
-      "price": 250,
-      "condition": "used",
-      "models": ["Impreza WRX"],
-      "yearFrom": 2004,
-      "yearTo": 2005,
-      "images": ["ecu-stock-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-09"
-    },
-    {
-      "id": "PRT-013",
-      "sku": "INJECTORS-850CC",
-      "title": "Fuel Injectors 850cc - Set of 4",
-      "description": "Injector Dynamics ID850 injectors. Set of 4. Perfect for E85 builds. Brand new in box.",
-      "category": "parts",
-      "price": 520,
-      "condition": "new",
-      "models": ["Impreza WRX", "WRX STI", "WRX", "Forester XT"],
-      "yearFrom": 2002,
-      "yearTo": 2014,
-      "images": ["injectors-id850-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-24"
-    },
-    {
-      "id": "PRT-014",
-      "sku": "TRANS-5SPD-WRX",
-      "title": "5-Speed Transmission - WRX",
-      "description": "Complete 5-speed manual transmission from 2006 WRX. 85,000km. Includes flywheel and starter.",
-      "category": "parts",
-      "price": 1200,
-      "condition": "used",
-      "models": ["Impreza WRX"],
-      "yearFrom": 2002,
-      "yearTo": 2007,
-      "images": ["trans-5spd-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-07"
-    },
-    {
-      "id": "PRT-015",
-      "sku": "DCCD-TRANS-STI",
-      "title": "6-Speed DCCD Transmission - STI",
-      "description": "Complete 6-speed DCCD transmission from 2007 STI. 52,000km. Includes all sensors and linkage.",
-      "category": "parts",
-      "price": 2800,
-      "condition": "used",
-      "models": ["WRX STI"],
-      "yearFrom": 2004,
-      "yearTo": 2007,
-      "images": ["dccd-trans-1.jpg", "dccd-trans-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-06"
-    },
-    {
-      "id": "PRT-016",
-      "sku": "DIFF-REAR-R180",
-      "title": "Rear Differential R180 - STI",
-      "description": "R180 rear differential from 2006 STI. 3.90 ratio. Includes stub axles and mounting hardware.",
-      "category": "parts",
-      "price": 750,
-      "condition": "used",
-      "models": ["WRX STI", "Impreza WRX"],
-      "yearFrom": 2002,
-      "yearTo": 2007,
-      "images": ["diff-r180-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-26"
-    },
-    {
-      "id": "PRT-017",
-      "sku": "BREMBO-FRONT-STI",
-      "title": "Brembo Front Brake Kit - STI 4-Pot",
-      "description": "Complete front Brembo kit from 2008 STI. 4-pot calipers, 2-piece rotors, pads, and lines included.",
-      "category": "parts",
-      "price": 980,
-      "condition": "used",
-      "models": ["WRX STI", "Impreza WRX", "Legacy GT", "Forester XT"],
-      "yearFrom": 2004,
-      "yearTo": 2014,
-      "images": ["brembo-front-1.jpg", "brembo-front-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-27"
-    },
-    {
-      "id": "PRT-018",
-      "sku": "STEERING-RACK-WRX",
-      "title": "Power Steering Rack - WRX",
-      "description": "OEM power steering rack from 2010 WRX. Quick ratio. No leaks, tight feel. Inner and outer tie rods included.",
-      "category": "parts",
-      "price": 320,
-      "condition": "used",
-      "models": ["Impreza WRX", "WRX", "WRX STI"],
-      "yearFrom": 2008,
-      "yearTo": 2014,
-      "images": ["steering-rack-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-28"
-    },
-    {
-      "id": "PRT-019",
-      "sku": "INTAKE-COBB-FA20",
-      "title": "Cobb SF Intake System - FA20 WRX",
-      "description": "Cobb SF airbox intake for 2015+ WRX. Complete kit with filter, MAF housing, and heatshield. +15 HP.",
-      "category": "parts",
-      "price": 340,
-      "condition": "new",
-      "models": ["WRX"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["intake-cobb-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-29"
-    },
-    {
-      "id": "PRT-020",
-      "sku": "ACCESSPORT-V3",
-      "title": "Cobb Accessport V3 - Subaru",
-      "description": "Cobb Accessport V3 for FA20 WRX. Unmarried, ready to pair. Includes cable and mount.",
-      "category": "parts",
-      "price": 550,
-      "condition": "used",
-      "models": ["WRX", "WRX STI", "Forester XT"],
-      "yearFrom": 2015,
-      "yearTo": 2021,
-      "images": ["accessport-v3-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-30"
-    },
-    {
-      "id": "VEH-001",
-      "sku": "2018-WRX-STI",
-      "title": "2018 Subaru WRX STI - Type RA",
-      "description": "Limited Type RA model. 35,000km. 310 HP. Carbon roof, BBS wheels. Full service history. One owner.",
-      "category": "vehicles",
-      "price": 42000,
-      "condition": "used",
-      "models": ["WRX STI"],
-      "yearFrom": 2018,
-      "yearTo": 2018,
-      "images": ["2018-sti-ra-1.jpg", "2018-sti-ra-2.jpg", "2018-sti-ra-3.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-20"
-    },
-    {
-      "id": "VEH-002",
-      "sku": "2015-WRX-CVT",
-      "title": "2015 Subaru WRX - CVT",
-      "description": "WRX with Sport Lineartronic CVT. 78,000km. Perfect daily driver. Clean title, no accidents.",
-      "category": "vehicles",
-      "price": 22000,
-      "condition": "used",
-      "models": ["WRX"],
-      "yearFrom": 2015,
-      "yearTo": 2015,
-      "images": ["2015-wrx-cvt-1.jpg", "2015-wrx-cvt-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-18"
-    },
-    {
-      "id": "VEH-003",
-      "sku": "2020-FORESTER-XT",
-      "title": "2020 Subaru Forester Sport",
-      "description": "Forester Sport with turbocharged FA24. 28,000km. Eyesight, leather, panoramic roof. Like new condition.",
-      "category": "vehicles",
-      "price": 35000,
-      "condition": "used",
-      "models": ["Forester"],
-      "yearFrom": 2020,
-      "yearTo": 2020,
-      "images": ["2020-forester-sport-1.jpg", "2020-forester-sport-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-22"
-    },
-    {
-      "id": "VEH-004",
-      "sku": "2012-LEGACY-GT",
-      "title": "2012 Subaru Legacy GT - 6-Speed",
-      "description": "Rare manual Legacy GT. EJ255 turbo. 92,000km. STI suspension, Brembo brakes. Enthusiast owned.",
-      "category": "vehicles",
-      "price": 18500,
-      "condition": "used",
-      "models": ["Legacy"],
-      "yearFrom": 2012,
-      "yearTo": 2012,
-      "images": ["2012-legacy-gt-1.jpg", "2012-legacy-gt-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-15"
-    },
-    {
-      "id": "VEH-005",
-      "sku": "2019-BRZ-TS",
-      "title": "2019 Subaru BRZ tS - Limited Edition",
-      "description": "Limited tS model with STI tuning. 22,000km. Brembo brakes, Sachs dampers. Number 156 of 500.",
-      "category": "vehicles",
-      "price": 32000,
-      "condition": "used",
-      "models": ["BRZ"],
-      "yearFrom": 2019,
-      "yearTo": 2019,
-      "images": ["2019-brz-ts-1.jpg", "2019-brz-ts-2.jpg", "2019-brz-ts-3.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-24"
-    },
-    {
-      "id": "VEH-006",
-      "sku": "2008-IMPREZA-WRX",
-      "title": "2008 Subaru Impreza WRX Hatch",
-      "description": "Narrow body WRX hatchback. EJ255 turbo. 115,000km. Well maintained, recent timing belt service.",
-      "category": "vehicles",
-      "price": 15000,
-      "condition": "used",
-      "models": ["Impreza WRX"],
-      "yearFrom": 2008,
-      "yearTo": 2008,
-      "images": ["2008-wrx-hatch-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-12"
-    },
-    {
-      "id": "BRK-001",
-      "sku": "BREAKING-2005-STI",
-      "title": "Breaking: 2005 WRX STI - All Parts Available",
-      "description": "Complete 2005 WRX STI being parted out. EJ207, 6-speed DCCD, Brembo brakes, interior, body panels all available.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["WRX STI"],
-      "yearFrom": 2005,
-      "yearTo": 2005,
-      "images": ["breaking-2005-sti-1.jpg", "breaking-2005-sti-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-16"
-    },
-    {
-      "id": "BRK-002",
-      "sku": "BREAKING-2010-LEGACY",
-      "title": "Breaking: 2010 Legacy 2.5GT",
-      "description": "2010 Legacy 2.5GT being dismantled. EJ255 engine, automatic transmission, interior parts, body panels.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["Legacy"],
-      "yearFrom": 2010,
-      "yearTo": 2010,
-      "images": ["breaking-2010-legacy-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-14"
-    },
-    {
-      "id": "BRK-003",
-      "sku": "BREAKING-2014-FORESTER",
-      "title": "Breaking: 2014 Forester XT",
-      "description": "2014 Forester XT turbo being parted out. FA20 DIT engine, CVT trans, EyeSight components, full interior.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["Forester"],
-      "yearFrom": 2014,
-      "yearTo": 2014,
-      "images": ["breaking-2014-forester-1.jpg", "breaking-2014-forester-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-19"
-    },
-    {
-      "id": "BRK-004",
-      "sku": "BREAKING-2017-WRX",
-      "title": "Breaking: 2017 WRX Premium",
-      "description": "Collision damaged 2017 WRX. FA20 DIT intact, 6-speed manual good, rear end damage. Many parts available.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["WRX"],
-      "yearFrom": 2017,
-      "yearTo": 2017,
-      "images": ["breaking-2017-wrx-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-21"
-    },
-    {
-      "id": "BRK-005",
-      "sku": "BREAKING-2006-OUTBACK",
-      "title": "Breaking: 2006 Outback 3.0R",
-      "description": "Rare EZ30 H6 Outback being parted. Engine, auto trans, suspension, interior, all panels available.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["Outback"],
-      "yearFrom": 2006,
-      "yearTo": 2006,
-      "images": ["breaking-2006-outback-1.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-11"
-    },
-    {
-      "id": "BRK-006",
-      "sku": "BREAKING-2003-IMPREZA",
-      "title": "Breaking: 2003 Impreza WRX Wagon",
-      "description": "JDM Impreza WRX wagon. EJ205, 5-speed, complete interior. Ideal for STI swap project parts.",
-      "category": "breaking",
-      "price": null,
-      "condition": "used",
-      "models": ["Impreza WRX"],
-      "yearFrom": 2003,
-      "yearTo": 2003,
-      "images": ["breaking-2003-wrx-1.jpg", "breaking-2003-wrx-2.jpg"],
-      "inStock": true,
-      "dateAdded": "2026-01-08"
-    }
-  ],
-  "categories": ["engines", "parts", "vehicles", "breaking"],
-  "conditions": ["new", "used", "rebuilt"],
-  "models": ["Impreza", "Impreza WRX", "WRX", "WRX STI", "Legacy", "Legacy GT", "Forester", "Forester XT", "Outback", "XV", "BRZ", "Levorg", "Tribeca"],
-  "lastUpdated": "2026-01-30",
-  "totalProducts": 40
+    "products":  [
+                     {
+                         "id":  "ENG-001",
+                         "sku":  "EJ257-2019-LOW",
+                         "title":  "EJ257 2.5L Turbo Engine - Low Mileage",
+                         "description":  "Complete EJ257 engine from 2019 WRX STI. 45,000km. Includes turbo, manifolds, and harness. Compression tested and verified.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX STI",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "EJ2572.5LTurboEngine.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-15"
+                     },
+                     {
+                         "id":  "ENG-002",
+                         "sku":  "EJ205-TURBO-COMP",
+                         "title":  "EJ205 2.0L Turbo Engine Complete",
+                         "description":  "Complete EJ205 turbo engine from 2005 Impreza WRX. 78,000km. Includes TD04 turbo, intercooler piping, and ECU.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "EJ2052.0LTurbo_EngineComplete.jpg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-10"
+                     },
+                     {
+                         "id":  "ENG-003",
+                         "sku":  "EJ25-NA-SOHC",
+                         "title":  "EJ25 2.5L SOHC NA Engine",
+                         "description":  "Non-turbo EJ25 SOHC engine. 95,000km. Perfect for Outback or Legacy replacement. All accessories included.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "Legacy",
+                                        "Outback",
+                                        "Forester"
+                                    ],
+                         "yearFrom":  2005,
+                         "yearTo":  2012,
+                         "images":  [
+                                        "EJ252.5LSOHCNA_Engine.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-08"
+                     },
+                     {
+                         "id":  "ENG-004",
+                         "sku":  "FA20-DIT-NEW",
+                         "title":  "FA20 DIT 2.0L Turbo - Brand New",
+                         "description":  "Brand new FA20 DIT turbocharged engine. Factory sealed with full Subaru warranty. For 2015+ WRX applications.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX",
+                                        "Levorg"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "FA20DIT2.0LTurbo_BrandNew.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-20"
+                     },
+                     {
+                         "id":  "ENG-005",
+                         "sku":  "EZ30-FLAT6-COMP",
+                         "title":  "EZ30 3.0L Flat-6 Engine",
+                         "description":  "Complete EZ30 flat-six engine from 2008 Legacy. 68,000km. Rare H6 powerplant in excellent condition.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "Legacy",
+                                        "Outback",
+                                        "Tribeca"
+                                    ],
+                         "yearFrom":  2003,
+                         "yearTo":  2009,
+                         "images":  [
+                                        "EZ303.0LFlat6Engine.jpg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-12"
+                     },
+                     {
+                         "id":  "ENG-006",
+                         "sku":  "EJ207-V7-STI",
+                         "title":  "EJ207 2.0L STI Engine - Version 7",
+                         "description":  "Legendary EJ207 Version 7 STI engine. Twin-scroll turbo setup. 62,000km. JDM import with documentation.",
+                         "category":  "engines",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX STI",
+                                        "Impreza"
+                                    ],
+                         "yearFrom":  2001,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "EJ2072.0LSTIVersion7.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-18"
+                     },
+                     {
+                         "id":  "ENG-007",
+                         "sku":  "FB25-REBUILT",
+                         "title":  "FB25 2.5L Engine - Rebuilt",
+                         "description":  "Professionally rebuilt FB25 engine with new gaskets, timing chain, and water pump. 6-month warranty included.",
+                         "category":  "engines",
+                         "condition":  "rebuilt",
+                         "models":  [
+                                        "Forester",
+                                        "Outback",
+                                        "XV"
+                                    ],
+                         "yearFrom":  2011,
+                         "yearTo":  2018,
+                         "images":  [
+                                        "fb25-2-5l-engine-rebuilt-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-22"
+                     },
+                     {
+                         "id":  "PRT-001",
+                         "sku":  "TD04-TURBO-WRX",
+                         "title":  "TD04 Turbocharger - WRX",
+                         "description":  "OEM TD04 turbocharger for Subaru WRX. Fully rebuilt with new CHRA. Balanced and tested.",
+                         "category":  "parts",
+                         "condition":  "rebuilt",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "TD04_TurbochargerWRX.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-14"
+                     },
+                     {
+                         "id":  "PRT-002",
+                         "sku":  "VF48-TURBO-STI",
+                         "title":  "VF48 Turbocharger - STI",
+                         "description":  "Genuine IHI VF48 turbo from WRX STI. Low miles, excellent condition. Direct bolt-on for 2004-2007 STI.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "IHI_VF48_Turbo_Turbocharger.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-16"
+                     },
+                     {
+                         "id":  "PRT-003",
+                         "sku":  "HEADGASKET-EJ25",
+                         "title":  "Head Gasket Set - EJ25 MLS",
+                         "description":  "Multi-layer steel head gasket set for EJ25 engines. Includes all necessary gaskets and seals for complete head job.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "Impreza",
+                                        "Legacy",
+                                        "Forester",
+                                        "Outback"
+                                    ],
+                         "yearFrom":  1999,
+                         "yearTo":  2012,
+                         "images":  [
+                                        "Head_Gasket_EJ25MLS.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-05"
+                     },
+                     {
+                         "id":  "PRT-004",
+                         "sku":  "TIMING-KIT-EJ",
+                         "title":  "Complete Timing Belt Kit - EJ Series",
+                         "description":  "Premium timing belt kit. Includes belt, tensioner, idlers, water pump, and thermostat. Gates/Continental brands.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "Impreza",
+                                        "WRX",
+                                        "Legacy",
+                                        "Forester",
+                                        "Outback"
+                                    ],
+                         "yearFrom":  1999,
+                         "yearTo":  2012,
+                         "images":  [
+                                        "Timing_Belt_Kit_EJSeries.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-05"
+                     },
+                     {
+                         "id":  "PRT-005",
+                         "sku":  "CLUTCH-KIT-STI",
+                         "title":  "Performance Clutch Kit - STI",
+                         "description":  "Exedy Stage 1 organic clutch kit for WRX STI. Handles 400+ lb-ft torque. Includes pressure plate, disc, and bearing.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "performance-clutch-kit-sti-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-19"
+                     },
+                     {
+                         "id":  "PRT-006",
+                         "sku":  "INTERCOOLER-TMIC",
+                         "title":  "Top Mount Intercooler - WRX/STI",
+                         "description":  "OEM top mount intercooler from 2008 WRX STI. Upgraded Y-pipe included. No leaks or damage.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "intercooler.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-11"
+                     },
+                     {
+                         "id":  "PRT-007",
+                         "sku":  "AXLEBACK-STI",
+                         "title":  "Axle-Back Exhaust - STI",
+                         "description":  "Genuine STI axle-back exhaust. Quad tips, deep tone. Direct fit for 2015+ WRX/STI sedan.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX",
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "Axle_ExhaustSTI.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-17"
+                     },
+                     {
+                         "id":  "PRT-008",
+                         "sku":  "COILOVERS-BC",
+                         "title":  "BC Racing Coilovers - GD Impreza",
+                         "description":  "BC Racing BR series coilovers for 2002-2007 Impreza/WRX. 30-way adjustable. 8K/6K spring rates.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza",
+                                        "Impreza WRX",
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "CoiloverImpreza.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-13"
+                     },
+                     {
+                         "id":  "PRT-009",
+                         "sku":  "RADIATOR-WRX",
+                         "title":  "Aluminum Radiator - WRX/STI",
+                         "description":  "Mishimoto aluminum radiator. 40% increased capacity over stock. Includes cap and drain plug.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2008,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "Aluminum_Radiator.jpg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-21"
+                     },
+                     {
+                         "id":  "PRT-010",
+                         "sku":  "SHORTBLOCK-EJ257",
+                         "title":  "EJ257 Short Block - Closed Deck",
+                         "description":  "IAG Stage 2.5 closed deck EJ257 short block. 1000+ HP capable. Brand new with documentation.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX STI",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "ej257-short-block-closed-deck-0.jpeg",
+                                        "ej257-short-block-closed-deck-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-25"
+                     },
+                     {
+                         "id":  "PRT-011",
+                         "sku":  "HEADERS-EL-FA20",
+                         "title":  "Equal Length Headers - FA20",
+                         "description":  "Tomei equal length headers for FA20 WRX. Stainless steel. Removes unequal rumble, adds 15-20 HP.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "Headers-FA20.jpg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-23"
+                     },
+                     {
+                         "id":  "PRT-012",
+                         "sku":  "HEADLIGHTS-SET",
+                         "title":  "Subaru Headlights Set",
+                         "description":  "Complete OEM headlight set for various Subaru models. Crystal clear lenses, all wiring included. Perfect replacement or upgrade for damaged or worn headlights.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2005,
+                         "images":  [
+                                        "ecu-stock-gd-impreza-wrx-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-09"
+                     },
+                     {
+                         "id":  "PRT-013",
+                         "sku":  "GEARBOX-ALL",
+                         "title":  "Subaru Gearboxes - For All Models",
+                         "description":  "Selection of manual and automatic gearboxes for all Subaru models. Various ratios and configurations available. Contact us with your specific model and year.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "WRX STI",
+                                        "WRX",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "fuel-injectors-850cc-set-of-4-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-24"
+                     },
+                     {
+                         "id":  "PRT-014",
+                         "sku":  "ENGINE-ALL",
+                         "title":  "Subaru Engines - For All Models",
+                         "description":  "Wide range of Subaru engines available. EJ, FA, FB, and EZ series. Various displacements and configurations. Turbo and naturally aspirated options. Contact for specific availability.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "5-speed-transmission-wrx-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-07"
+                     },
+                     {
+                         "id":  "PRT-015",
+                         "sku":  "LEGACY-HEADLIGHTS",
+                         "title":  "Subaru Legacy Headlites Set",
+                         "description":  "Premium OEM headlight set specifically for Subaru Legacy models. Includes left and right assemblies with all mounting hardware and connectors.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "6-speed-dccd-transmission-sti-0.jpeg",
+                                        "6-speed-dccd-transmission-sti-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-06"
+                     },
+                     {
+                         "id":  "PRT-016",
+                         "sku":  "TIRES-RIMS-ALL",
+                         "title":  "All Tires and Rims Sets",
+                         "description":  "Complete tire and rim packages for all Subaru models. Various sizes and styles available. Summer, winter, and all-season options. OEM and aftermarket wheels in stock.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI",
+                                        "Impreza WRX"
+                                    ],
+                         "yearFrom":  2002,
+                         "yearTo":  2007,
+                         "images":  [
+                                        "rear-differential-r180-sti-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-26"
+                     },
+                     {
+                         "id":  "PRT-017",
+                         "sku":  "BUMPER-REAR-ALL",
+                         "title":  "Back Bumpers SUBARU All Models",
+                         "description":  "Complete rear bumper assemblies for all Subaru models. OEM and aftermarket options available. Includes mounting brackets and hardware. Various colors and styles in stock.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI",
+                                        "Impreza WRX",
+                                        "Legacy GT",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2004,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "brembo-front-brake-kit-sti-4-pot-0.jpeg",
+                                        "brembo-front-brake-kit-sti-4-pot-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-27"
+                     },
+                     {
+                         "id":  "PRT-018",
+                         "sku":  "BUMPER-FRONT-ALL",
+                         "title":  "Front Bumpers Subaru - For All Models",
+                         "description":  "Complete front bumper assemblies for all Subaru models. OEM quality replacement bumpers with proper fitment. Includes grilles and lower trim pieces. Multiple color options available.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX",
+                                        "WRX",
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2008,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "power-steering-rack-wrx-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-28"
+                     },
+                     {
+                         "id":  "PRT-019",
+                         "sku":  "ENGINE-USED-ALL",
+                         "title":  "Second Hand Subaru Engines - For All Models",
+                         "description":  "Quality used Subaru engines for all models. Thoroughly tested and inspected. EJ, FA, FB, and EZ series available. Compression tested with warranty options.",
+                         "category":  "parts",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "cobb-sf-intake-system-fa20-wrx-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-29"
+                     },
+                     {
+                         "id":  "PRT-020",
+                         "sku":  "ENGINE-NEW-ALL",
+                         "title":  "Brand New Subaru Engines - For All Models",
+                         "description":  "Factory new Subaru engines with full manufacturer warranty. Complete long blocks ready for installation. All engine series available. Zero miles, sealed from factory.",
+                         "category":  "parts",
+                         "condition":  "new",
+                         "models":  [
+                                        "WRX",
+                                        "WRX STI",
+                                        "Forester XT"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2021,
+                         "images":  [
+                                        "cobb-accessport-v3-subaru-0.webp"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-30"
+                     },
+                     {
+                         "id":  "VEH-001",
+                         "sku":  "2018-WRX-STI",
+                         "title":  "2018 Subaru WRX STI - Type RA",
+                         "description":  "Limited Type RA model. 35,000km. 310 HP. Carbon roof, BBS wheels. Full service history. One owner.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2018,
+                         "yearTo":  2018,
+                         "images":  [
+                                        "2018-subaru-wrx-sti-type-ra-0.jpeg",
+                                        "2018-subaru-wrx-sti-type-ra-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-20"
+                     },
+                     {
+                         "id":  "VEH-002",
+                         "sku":  "2015-WRX-CVT",
+                         "title":  "2015 Subaru WRX - CVT",
+                         "description":  "WRX with Sport Lineartronic CVT. 78,000km. Perfect daily driver. Clean title, no accidents.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX"
+                                    ],
+                         "yearFrom":  2015,
+                         "yearTo":  2015,
+                         "images":  [
+                                        "2015-subaru-wrx-cvt-0.jpeg",
+                                        "2015-subaru-wrx-cvt-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-18"
+                     },
+                     {
+                         "id":  "VEH-003",
+                         "sku":  "2020-FORESTER-XT",
+                         "title":  "2020 Subaru Forester Sport",
+                         "description":  "Forester Sport with turbocharged FA24. 28,000km. Eyesight, leather, panoramic roof. Like new condition.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "Forester"
+                                    ],
+                         "yearFrom":  2020,
+                         "yearTo":  2020,
+                         "images":  [
+                                        "2020-subaru-forester-sport-0.jpeg",
+                                        "2020-subaru-forester-sport-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-22"
+                     },
+                     {
+                         "id":  "VEH-004",
+                         "sku":  "2012-LEGACY-GT",
+                         "title":  "2012 Subaru Legacy GT - 6-Speed",
+                         "description":  "Rare manual Legacy GT. EJ255 turbo. 92,000km. STI suspension, Brembo brakes. Enthusiast owned.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "Legacy"
+                                    ],
+                         "yearFrom":  2012,
+                         "yearTo":  2012,
+                         "images":  [
+                                        "2012-subaru-legacy-gt-6-speed-0.jpeg",
+                                        "2012-subaru-legacy-gt-6-speed-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-15"
+                     },
+                     {
+                         "id":  "VEH-005",
+                         "sku":  "2019-BRZ-TS",
+                         "title":  "2019 Subaru BRZ tS - Limited Edition",
+                         "description":  "Limited tS model with STI tuning. 22,000km. Brembo brakes, Sachs dampers. Number 156 of 500.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "BRZ"
+                                    ],
+                         "yearFrom":  2019,
+                         "yearTo":  2019,
+                         "images":  [
+                                        "2019-subaru-brz-ts-limited-edition-0.jpeg",
+                                        "2019-subaru-brz-ts-limited-edition-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-24"
+                     },
+                     {
+                         "id":  "VEH-006",
+                         "sku":  "2008-IMPREZA-WRX",
+                         "title":  "2008 Subaru Impreza WRX Hatch",
+                         "description":  "Narrow body WRX hatchback. EJ255 turbo. 115,000km. Well maintained, recent timing belt service.",
+                         "category":  "vehicles",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX"
+                                    ],
+                         "yearFrom":  2008,
+                         "yearTo":  2008,
+                         "images":  [
+                                        "2008-subaru-impreza-wrx-hatch-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-12"
+                     },
+                     {
+                         "id":  "BRK-001",
+                         "sku":  "BREAKING-2005-STI",
+                         "title":  "Breaking: 2005 WRX STI - All Parts Available",
+                         "description":  "Complete 2005 WRX STI being parted out. EJ207, 6-speed DCCD, Brembo brakes, interior, body panels all available.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX STI"
+                                    ],
+                         "yearFrom":  2005,
+                         "yearTo":  2005,
+                         "images":  [
+                                        "breaking-2005-wrx-sti-all-parts-available-0.jpeg",
+                                        "breaking-2005-wrx-sti-all-parts-available-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-16"
+                     },
+                     {
+                         "id":  "BRK-002",
+                         "sku":  "BREAKING-2010-LEGACY",
+                         "title":  "Breaking: 2010 Legacy 2.5GT",
+                         "description":  "2010 Legacy 2.5GT being dismantled. EJ255 engine, automatic transmission, interior parts, body panels.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "Legacy"
+                                    ],
+                         "yearFrom":  2010,
+                         "yearTo":  2010,
+                         "images":  [
+                                        "breaking-2010-legacy-2-5gt-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-14"
+                     },
+                     {
+                         "id":  "BRK-003",
+                         "sku":  "BREAKING-2014-FORESTER",
+                         "title":  "Breaking: 2014 Forester XT",
+                         "description":  "2014 Forester XT turbo being parted out. FA20 DIT engine, CVT trans, EyeSight components, full interior.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "Forester"
+                                    ],
+                         "yearFrom":  2014,
+                         "yearTo":  2014,
+                         "images":  [
+                                        "breaking-2014-forester-xt-0.jpeg",
+                                        "breaking-2014-forester-xt-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-19"
+                     },
+                     {
+                         "id":  "BRK-004",
+                         "sku":  "BREAKING-2017-WRX",
+                         "title":  "Breaking: 2017 WRX Premium",
+                         "description":  "Collision damaged 2017 WRX. FA20 DIT intact, 6-speed manual good, rear end damage. Many parts available.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "WRX"
+                                    ],
+                         "yearFrom":  2017,
+                         "yearTo":  2017,
+                         "images":  [
+                                        "breaking-2017-wrx-premium-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-21"
+                     },
+                     {
+                         "id":  "BRK-005",
+                         "sku":  "BREAKING-2006-OUTBACK",
+                         "title":  "Breaking: 2006 Outback 3.0R",
+                         "description":  "Rare EZ30 H6 Outback being parted. Engine, auto trans, suspension, interior, all panels available.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "Outback"
+                                    ],
+                         "yearFrom":  2006,
+                         "yearTo":  2006,
+                         "images":  [
+                                        "breaking-2006-outback-3-0r-0.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-11"
+                     },
+                     {
+                         "id":  "BRK-006",
+                         "sku":  "BREAKING-2003-IMPREZA",
+                         "title":  "Breaking: 2003 Impreza WRX Wagon",
+                         "description":  "JDM Impreza WRX wagon. EJ205, 5-speed, complete interior. Ideal for STI swap project parts.",
+                         "category":  "breaking",
+                         "condition":  "used",
+                         "models":  [
+                                        "Impreza WRX"
+                                    ],
+                         "yearFrom":  2003,
+                         "yearTo":  2003,
+                         "images":  [
+                                        "breaking-2003-impreza-wrx-wagon-0.jpeg",
+                                        "breaking-2003-impreza-wrx-wagon-1.jpeg"
+                                    ],
+                         "inStock":  true,
+                         "dateAdded":  "2026-01-08"
+                     }
+                 ],
+    "categories":  [
+                       "engines",
+                       "parts",
+                       "vehicles",
+                       "breaking"
+                   ],
+    "conditions":  [
+                       "new",
+                       "used",
+                       "rebuilt"
+                   ],
+    "models":  [
+                   "Impreza",
+                   "Impreza WRX",
+                   "WRX",
+                   "WRX STI",
+                   "Legacy",
+                   "Legacy GT",
+                   "Forester",
+                   "Forester XT",
+                   "Outback",
+                   "XV",
+                   "BRZ",
+                   "Levorg",
+                   "Tribeca"
+               ],
+    "lastUpdated":  "2026-01-31",
+    "totalProducts":  40
 }

@@ -13,14 +13,14 @@
   
   <!-- SEO Meta Tags -->
   <title>Contact Us - Zaza Rush Subaru | Get in Touch</title>
-  <meta name="description" content="Contact Zaza Rush Subaru for Subaru parts, service bookings, and inquiries. Visit us at Waterfalls, Harare or reach us via WhatsApp, phone, or email.">
+  <meta name="description" content="Contact Zaza Rush Subaru for Subaru parts, service bookings, and inquiries. Visit us at Waterfalls (Zindoga Shops), Harare or reach us via WhatsApp, phone, or email.">
   <meta name="keywords" content="Contact Subaru Harare, Subaru specialist phone, Subaru parts inquiry, Subaru service booking Zimbabwe">
   <meta name="author" content="bguvava">
   <meta name="robots" content="index, follow">
   
   <!-- Open Graph -->
   <meta property="og:title" content="Contact Us - Zaza Rush Subaru">
-  <meta property="og:description" content="Get in touch with Zimbabwe's premier Subaru specialist.">
+  <meta property="og:description" content="Get in touch with Zimbabwe's leading Subaru specialist.">
   <meta property="og:image" content="assets/images/og-contact.jpg">
   <meta property="og:url" content="https://www.rushsubaru.com/contact.html">
   <meta property="og:type" content="website">
@@ -52,20 +52,26 @@
 </head>
 <body>
   <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
   
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="mainNav">
     <div class="container">
+      <!-- Logo -->
       <a class="navbar-brand" href="index.html">
-        <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="45" class="logo-white">
-        <img src="assets/images/logo/logo-dark.png" alt="Zaza Rush Subaru" height="45" class="logo-dark d-none">
+        <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru Logo" height="50">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <span class="visually-hidden">Menu</span>
       </button>
+      
+      <!-- Navigation Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -79,37 +85,46 @@
             <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="contact.html">Contact</a>
+            <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link nav-cta" href="sell.html">Sell Your Subaru</a>
+          <li class="nav-item ms-lg-2">
+            <a class="nav-link btn" href="sell.html">Sell Your Subaru</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <header class="contact-hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="row align-items-center min-vh-40">
-        <div class="col-lg-8" data-aos="fade-up">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
-            </ol>
-          </nav>
-          <h1 class="hero-title">Get in Touch</h1>
-          <p class="hero-subtitle">
-            Have questions about parts, need a service booking, or want to sell your Subaru? 
-            We're here to help. Reach out through any channel below.
-          </p>
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- ============================================
+         PAGE HEADER
+    ============================================ -->
+    <section class="page-header py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8" data-aos="fade-right">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb mb-2">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact</li>
+              </ol>
+            </nav>
+            <h1 class="page-title display-4 fw-bold text-white mb-3">Get in Touch</h1>
+            <p class="page-subtitle lead text-white-75">
+              Have questions about your Subaru? We're here to help.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
+            <a href="https://wa.me/263776381498?text=Hello!%20I'd%20like%20to%20get%20in%20touch%20with%20Zaza%20Rush%20Subaru." 
+               class="btn btn-light btn-lg" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp me-2"></i>Quick Inquiry
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </section>
 
   <!-- Contact Info Cards Section - CON-001 to CON-004, CON-024 -->
   <section class="contact-cards py-5">
@@ -124,10 +139,10 @@
             <h3 class="card-title">Visit Us</h3>
             <p class="card-text">
               Number 9 Sherwood Crescent,<br>
-              Waterfalls, Zindoga Shops,<br>
+              Waterfalls (Zindoga Shops), Zindoga Shops,<br>
               Harare, Zimbabwe
             </p>
-            <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls+Harare+Zimbabwe" 
+            <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" 
                target="_blank" 
                class="card-link">
               Get Directions <i class="fas fa-arrow-right ms-1"></i>
@@ -159,7 +174,7 @@
             </div>
             <h3 class="card-title">Email Us</h3>
             <p class="card-text">
-              <a href="mailto:sales@rushsubaru.com" class="contact-link">sales@rushsubaru.com</a>
+              <a href="mailto:info@rushsubaru.com" class="contact-link">sales@rushsubaru.com</a>
             </p>
             <p class="card-note">
               We respond within 24 hours
@@ -411,7 +426,7 @@
             </h2>
           </div>
           <div class="col-auto" data-aos="fade-left">
-            <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls+Harare+Zimbabwe" 
+            <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" 
                class="btn btn-outline-primary"
                target="_blank"
                rel="noopener noreferrer">
@@ -425,7 +440,7 @@
     <!-- Map Container with Fallback - CON-025 -->
     <div class="map-container" id="mapContainer">
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.6883373485855!2d31.0177!3d-17.8684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sZindoga%20Shops%2C%20Waterfalls%2C%20Harare!5e0!3m2!1sen!2szw!4v1706600000000!5m2!1sen!2szw"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.6883373485855!2d31.0177!3d-17.8684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sZindoga%20Shops%2C%20Waterfalls (Zindoga Shops)%2C%20Harare!5e0!3m2!1sen!2szw!4v1706600000000!5m2!1sen!2szw"
         width="100%" 
         height="450" 
         style="border:0;" 
@@ -440,8 +455,8 @@
         <div class="fallback-content">
           <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
           <h4>Map Loading Issue</h4>
-          <p>Number 9 Sherwood Crescent, Waterfalls, Zindoga Shops, Harare, Zimbabwe</p>
-          <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls+Harare+Zimbabwe" 
+          <p>Number 9 Sherwood Crescent, Waterfalls (Zindoga Shops), Zindoga Shops, Harare, Zimbabwe</p>
+          <a href="https://maps.google.com/?q=Zindoga+Shops+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" 
              class="btn btn-primary"
              target="_blank">
             <i class="fas fa-external-link-alt me-2"></i>Open in Google Maps
@@ -451,84 +466,109 @@
     </div>
   </section>
 
+  </main>
+  <!-- End Main Content -->
+
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-main py-5">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Company Info -->
-          <div class="col-lg-4 col-md-6">
-            <div class="footer-brand mb-4">
-              <img src="assets/images/logo/logo-white.png" alt="Zaza Rush Subaru" height="50">
-            </div>
-            <p class="footer-about">
-              Zimbabwe's premier Subaru specialist. Quality parts, expert service, 
-              and genuine passion for the Subaru brand.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://wa.me/263776381498" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Company Info -->
+        <div class="col-lg-3 col-md-6">
+          <img src="assets/images/logo/official_logo_white.png" alt="Zaza Rush Subaru" height="36" class="mb-3">
           
-          <!-- Quick Links -->
-          <div class="col-lg-2 col-md-6">
-            <h5 class="footer-title">Quick Links</h5>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="catalog.html">Parts Catalog</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://wa.me/263776381498" target="_blank" rel="noopener" aria-label="WhatsApp" class="social-whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://facebook.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Facebook" class="social-facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/zazarushsubaru" target="_blank" rel="noopener" aria-label="Instagram" class="social-instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
-          
-          <!-- Services -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Our Services</h5>
-            <ul class="footer-links">
-              <li><a href="services.html#engines">Engine Sales</a></li>
-              <li><a href="services.html#parts">Parts Department</a></li>
-              <li><a href="services.html#breaking">Car Breaking</a></li>
-              <li><a href="services.html#trading">Vehicle Trading</a></li>
-              <li><a href="services.html#garage">Specialist Garage</a></li>
-            </ul>
-          </div>
-          
-          <!-- Contact Info -->
-          <div class="col-lg-3 col-md-6">
-            <h5 class="footer-title">Contact Us</h5>
-            <ul class="footer-contact">
-              <li>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Quick Links</h6>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="catalog.html">Parts Catalog</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sell.html">Sell Your Subaru</a></li>
+          </ul>
+        </div>
+        
+        <!-- Popular Products -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Popular Products</h6>
+          <ul class="footer-links">
+            <li><a href="catalog.html?cat=engines">EJ25 Engines</a></li>
+            <li><a href="catalog.html?cat=engines">EJ20 Turbo</a></li>
+            <li><a href="catalog.html?cat=turbo">Turbochargers</a></li>
+            <li><a href="catalog.html?cat=brakes">Brembo Brakes</a></li>
+            <li><a href="catalog.html?cat=suspension">Coilovers</a></li>
+            <li><a href="catalog.html?cat=body">Body Parts</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6 class="footer-heading">Our Services</h6>
+          <ul class="footer-links">
+            <li><a href="services.html#engines">Engine Sales</a></li>
+            <li><a href="services.html#parts">Parts Department</a></li>
+            <li><a href="services.html#breaking">Car Breaking</a></li>
+            <li><a href="services.html#trading">Vehicle Trading</a></li>
+            <li><a href="services.html#garage">Specialist Garage</a></li>
+            <li><a href="services.html#diagnostics">Diagnostics</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6 col-6">
+          <h6 class="footer-heading">Contact Us</h6>
+          <ul class="footer-links footer-contact">
+            <li>
+              <a href="https://maps.google.com/?q=Number+9+Sherwood+Crescent+Waterfalls (Zindoga Shops)+Harare+Zimbabwe" target="_blank" rel="noopener">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Number 9 Sherwood Crescent,<br>Waterfalls, Zindoga Shops,<br>Harare, Zimbabwe</span>
-              </li>
-              <li>
+                Sherwood Crescent, Waterfalls (Zindoga Shops), Harare
+              </a>
+            </li>
+            <li>
+              <a href="tel:+263776381498">
                 <i class="fas fa-phone"></i>
-                <a href="tel:+263776381498">+263 77 638 1498</a>
-              </li>
-              <li>
+                +263 77 638 1498
+              </a>
+            </li>
+            <li>
+              <a href="mailto:sales@rushsubaru.com">
                 <i class="fas fa-envelope"></i>
-                <a href="mailto:sales@rushsubaru.com">sales@rushsubaru.com</a>
-              </li>
-            </ul>
-          </div>
+                sales@rushsubaru.com
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/263776381498" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                WhatsApp Us
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    
-    <!-- Footer Bottom -->
-    <div class="footer-bottom py-3">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6 text-center text-md-start">
-            <p class="mb-0">&copy; <span id="currentYear"></span> Zaza Rush Subaru. All Rights Reserved.</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end">
-            <p class="mb-0 developer-credit">Developed with <i class="fas fa-heart text-danger"></i> by <a href="https://bguvava.com" target="_blank" rel="noopener">bguvava</a></p>
-          </div>
-        </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; <span class="copyright-year">2026</span> Zaza Rush Subaru. All Rights Reserved.</p>
+        <p class="developer-credits">
+          Developed and Hosted with <span style="color: #DC3545;">❤️</span> by 
+          <a href="https://blaxium.com" target="_blank" rel="noopener">Blaxium Hub</a>
+        </p>
       </div>
     </div>
   </footer>
@@ -538,13 +578,11 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- WhatsApp Float Button -->
-  <a href="https://wa.me/263776381498?text=Hello%20Zaza%20Rush%20Subaru!%20I'm%20interested%20in%20your%20services." 
-     class="whatsapp-float" 
-     target="_blank" 
-     aria-label="Contact us on WhatsApp">
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/263776381498?text=Hello!%20I'm%20interested%20in%20Zaza%20Rush%20Subaru%20services." 
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact us on WhatsApp">
     <i class="fab fa-whatsapp"></i>
-    <span class="whatsapp-tooltip">Chat with us!</span>
+    <span class="tooltip">Chat with us!</span>
   </a>
 
   <!-- JavaScript Libraries -->

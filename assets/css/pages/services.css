@@ -812,6 +812,17 @@
   z-index: 1;
 }
 
+.cta-title {
+  color: #FFFFFF !important;
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+  font-weight: 700;
+}
+
+.cta-subtitle {
+  color: #FFFFFF !important;
+  opacity: 0.95;
+}
+
 /* Success Button for WhatsApp */
 .btn-success {
   background-color: var(--color-whatsapp) !important;

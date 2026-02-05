@@ -146,38 +146,117 @@
 
   /* Section Spacing */
   section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
+  }
+
+  /* Hero Mobile Adjustments */
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero-text-content {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero-brand-wrapper {
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-brand-logo {
+    height: 50px;
+  }
+
+  .hero-brand-name {
+    font-size: 2rem;
+  }
+
+  .hero-main-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-highlight {
+    font-size: 2.2rem;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-trust-badges {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-image-frame {
+    margin-top: 2rem;
+  }
+
+  .hero-image-label {
+    font-size: 1rem;
   }
 
   /* Cards */
   .card {
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
   }
 
   /* Footer */
   .footer {
-    text-align: center;
-    padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    text-align: left;
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+  }
+  
+  .footer .col-6 {
+    margin-bottom: var(--spacing-md);
   }
 
   .footer-links {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 0;
+  }
+  
+  .footer-heading {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.25rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.75rem;
   }
 
   .social-links {
-    justify-content: center;
-    margin-bottom: var(--spacing-xl);
+    justify-content: flex-start;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Footer bottom - stack on mobile */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.25rem;
   }
 
   /* Navigation Mobile Menu */
   .navbar-collapse {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-sm) 0;
   }
 
   .navbar-nav .nav-link {
-    padding: var(--spacing-md) var(--spacing-sm) !important;
+    padding: 0.5rem 0.25rem !important;
     text-align: center;
-    border-bottom: 1px solid var(--color-light-gray);
+    font-size: 0.875rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 
   .navbar-nav .nav-link:last-child {

@@ -19,7 +19,7 @@ const PDFGenerator = (() => {
   const CONFIG = {
     companyName: 'Zaza Rush Subaru',
     slogan: 'The Heart of Every Subaru',
-    address: 'Number 9 Sherwood Crescent, Waterfalls, Zindoga Shops, Harare, Zimbabwe',
+    address: 'Number 9 Sherwood Crescent, Waterfalls (Zindoga Shops), Zindoga Shops, Harare, Zimbabwe',
     phone: '+263 77 638 1498',
     email: 'sales@rushsubaru.com',
     website: 'www.rushsubaru.com',

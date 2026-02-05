@@ -2,9 +2,9 @@
 
 > **Zimbabwe's Leading Subaru Specialist** - Professional website for Subaru parts, engines, services, and vehicle trading.
 
-![Zaza Rush Subaru](.github/screenshot/homepage.png)
+![Zaza Rush Subaru](.github/screenshot/home.png)
 
-## 🚀 Project Overview
+## Project Overview
 
 Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru specialist, offering:
 - **Quality Engines** - EJ & FA series engines for all Subaru models
@@ -14,13 +14,13 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 - **Car Breaking** - Quality used parts from breaking vehicles
 
 ### Live Website
-🌐 [www.rushsubaru.com](https://www.rushsubaru.com)
+[www.rushsubaru.com](https://www.rushsubaru.com)
 
 ---
 
-## ✨ Features
+## Features
 
-### 🏠 Homepage
+### Homepage
 - Hero section with dynamic carousel
 - Featured products showcase
 - Service highlights with icons
@@ -29,7 +29,7 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 - Statistics counter
 - Call-to-action sections
 
-### 🔧 Services Page
+### Services Page
 - Tabbed service categories
 - Engine sales & installation
 - Parts department
@@ -38,7 +38,7 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 - Car breaking services
 - Comprehensive diagnostics
 
-### 📦 Parts Catalog
+### Parts Catalog
 - Dynamic product filtering
 - Category-based navigation
 - Search functionality
@@ -47,7 +47,7 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 - Stock status indicators
 - Condition tags (New/Used)
 
-### 📞 Contact Page
+### Contact Page
 - Contact form with validation
 - Interactive Google Maps
 - Business hours & location
@@ -55,14 +55,14 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 - Social media integration
 - WhatsApp quick contact
 
-### ℹ️ About Page
+### About Page
 - Company story & mission
 - Core values showcase
 - Subaru expertise highlights
 - Team introduction
 - Facility photo gallery
 
-### 💰 Sell Your Subaru
+### Sell Your Subaru
 - Vehicle submission form
 - Photo upload capability
 - Condition assessment
@@ -72,7 +72,7 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Frontend
 - **HTML5** - Semantic markup
@@ -96,7 +96,7 @@ Zaza Rush Subaru is a comprehensive web platform for Zimbabwe's premier Subaru s
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 rushsubaru.com/
@@ -146,7 +146,7 @@ rushsubaru.com/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - **XAMPP** (or similar LAMP/WAMP stack)
@@ -178,7 +178,7 @@ rushsubaru.com/
 
 ---
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 - **Primary Blue**: `#0033A0` (Subaru brand blue)
@@ -203,7 +203,7 @@ rushsubaru.com/
 
 ---
 
-## 📱 Responsive Breakpoints
+## Responsive Breakpoints
 
 - **Mobile**: < 576px
 - **Tablet**: 576px - 991px
@@ -212,7 +212,7 @@ rushsubaru.com/
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Contact Form
 **POST** `/api/v1/contact.php`
@@ -243,7 +243,7 @@ rushsubaru.com/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Run comprehensive tests before deployment:
 
@@ -258,7 +258,7 @@ Run comprehensive tests before deployment:
 
 ---
 
-## 📦 Deployment
+## Deployment
 
 ### Production Deployment
 1. Upload files to cPanel hosting
@@ -279,7 +279,7 @@ Run comprehensive tests before deployment:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 This is a private commercial project. For inquiries or collaboration:
 - **Website**: [www.rushsubaru.com](https://www.rushsubaru.com)
@@ -288,7 +288,7 @@ This is a private commercial project. For inquiries or collaboration:
 
 ---
 
-## 📄 License
+## License
 
 © 2026 Zaza Rush Subaru. All Rights Reserved.
 
@@ -297,9 +297,9 @@ This codebase is private property. Unauthorized copying, modification, or distri
 
 ---
 
-## 👨‍💻 Development Credits
+## Development Credits
 
-**Developed and Hosted with ❤️ by [Blaxium Hub](https://blaxium.com)**
+**Developed and Hosted by [Blaxium Hub](https://blaxium.com)**
 
 - **Lead Developer**: bguvava
 - **Design**: Blaxium Hub Team
@@ -308,24 +308,24 @@ This codebase is private property. Unauthorized copying, modification, or distri
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
 ### Zaza Rush Subaru
-- 📍 Number 9 Sherwood Crescent, Waterfalls (Zindoga Shops), Harare, Zimbabwe
-- 📞 +263 77 638 1498
-- 📧 sales@rushsubaru.com
-- 🌐 [www.rushsubaru.com](https://www.rushsubaru.com)
+- **Address**: Number 9 Sherwood Crescent, Waterfalls (Zindoga Shops), Harare, Zimbabwe
+- **Phone**: +263 77 638 1498
+- **Email**: sales@rushsubaru.com
+- **Website**: [www.rushsubaru.com](https://www.rushsubaru.com)
 
 ### Developer Support
-- 🏢 Blaxium Hub
-- 🌐 [blaxium.com](https://blaxium.com)
+- **Company**: Blaxium Hub
+- **Website**: [blaxium.com](https://blaxium.com)
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Homepage
-![Homepage](.github/screenshot/homepage.png)
+![Homepage](.github/screenshot/home.png)
 
 ### Services Page
 ![Services](.github/screenshot/services.png)
@@ -333,35 +333,29 @@ This codebase is private property. Unauthorized copying, modification, or distri
 ### Parts Catalog
 ![Catalog](.github/screenshot/catalog.png)
 
-### Contact Page
-![Contact](.github/screenshot/contact.png)
-
-### About Us
-![About](.github/screenshot/about.png)
-
 ### Sell Your Subaru
 ![Sell](.github/screenshot/sell.png)
 
 ---
 
-## 🔄 Version History
+## Version History
 
 ### Version 1.0.0 (February 2026)
-- ✅ Initial website launch
-- ✅ Homepage with featured products
-- ✅ Services page with tabbed navigation
-- ✅ Dynamic parts catalog with filtering
-- ✅ Contact form with validation
-- ✅ About us with company story
-- ✅ Sell your Subaru form
-- ✅ WhatsApp integration
-- ✅ Responsive design
-- ✅ SEO optimization
-- ✅ Performance optimization
+- Initial website launch
+- Homepage with featured products
+- Services page with tabbed navigation
+- Dynamic parts catalog with filtering
+- Contact form with validation
+- About us with company story
+- Sell your Subaru form
+- WhatsApp integration
+- Responsive design
+- SEO optimization
+- Performance optimization
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - [ ] Customer portal for tracking orders
 - [ ] Online payment integration
